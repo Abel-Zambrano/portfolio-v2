@@ -6,7 +6,7 @@ const StyledHeader = styled.div`
   justify-content: space-between;
 `
 
-const Logo = styled.div`
+const Title = styled.div`
   font-size: 1.4rem;
   font-weight: 400;
 `
@@ -18,7 +18,9 @@ const NavLinks = styled.div`
 const Header = () => {
   return (
     <StyledHeader>
-      <Logo>Abel Zambrano</Logo>
+      <Title>
+        <h1>Abel Zambrano</h1>
+      </Title>
       <NavLinks>Nav Links</NavLinks>
     </StyledHeader>
   )
