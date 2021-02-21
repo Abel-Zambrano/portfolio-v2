@@ -9,6 +9,7 @@ const StyledHeader = styled.div`
 const Title = styled.div`
   font-size: 1.4rem;
   font-weight: 400;
+  color: var(--color-primary);
 `
 
 const NavLinks = styled.div`

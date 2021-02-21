@@ -3,6 +3,16 @@ import { createGlobalStyle } from "styled-components"
 const GlobalStyles = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap');
 
+:root {
+    --color-primary: #00cccc;
+    --color-primary-light:  #00ffff;
+    --color-primary-dark:  #009999;
+    --color-jetblack:  #000000;
+    --color-gray-dark:  #262626;
+    --color-gray-light:  #404040;
+    --color-white:  #ffffff;
+}
+
 *{
     margin: 0;
     padding: 0;
