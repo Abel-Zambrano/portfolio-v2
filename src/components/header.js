@@ -5,9 +5,13 @@ import Img from "gatsby-image"
 import NavLinks from "./NavLinks"
 
 const StyledHeader = styled.div`
+  background-color: var(--color-jetblack);
+`
+
+const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-jetblack);
+  margin: 0 2.2rem;
 `
 
 const Title = styled.div`
@@ -34,14 +38,16 @@ const Header = props => {
 
   return (
     <StyledHeader>
-      <Title>
-        <Img
-          style={{ width: "8rem" }}
-          fluid={data.file.childImageSharp.fluid}
-        />
-        <h1>Abel Zambrano</h1>
-      </Title>
-      <NavLinks />
+      <HeaderContainer>
+        <Title>
+          <Img
+            style={{ width: "8rem" }}
+            fluid={data.file.childImageSharp.fluid}
+          />
+          <h1>Abel Zambrano</h1>
+        </Title>
+        <NavLinks />
+      </HeaderContainer>
     </StyledHeader>
   )
 }
