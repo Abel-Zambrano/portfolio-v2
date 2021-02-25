@@ -1,7 +1,4 @@
-import React from "react"
-import { Link } from "gatsby"
-
-const data = [
+const links = [
   {
     id: 1,
     text: "home",
@@ -24,14 +21,16 @@ const data = [
   },
 ]
 
-const navLinks = data.map(link => {
-  return (
-    <li>
-      <Link to={link.url}>{link.text}</Link>
-    </li>
-  )
-})
+export default links
 
-export default ({ className }) => {
-  return <ul>{navLinks}</ul>
-}
+// const navLinks = data.map(link => {
+//   return (
+//     <li>
+//       <Link to={link.url}>{link.text}</Link>
+//     </li>
+//   )
+// })
+
+// export default ({ className }) => {
+//   return <ul>{navLinks}</ul>
+// }

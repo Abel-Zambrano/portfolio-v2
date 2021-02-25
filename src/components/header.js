@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
-import Links from "../constants/links"
+import NavLinks from "./NavLinks"
 
 const StyledHeader = styled.div`
   display: flex;
@@ -17,10 +17,6 @@ const Title = styled.div`
   font-weight: 400;
   color: var(--color-white);
   text-transform: uppercase;
-`
-
-const Nav = styled(Links)`
-  color: var(--color-white);
 `
 
 const Header = props => {
@@ -45,7 +41,7 @@ const Header = props => {
         />
         <h1>Abel Zambrano</h1>
       </Title>
-      <Nav />
+      <NavLinks />
     </StyledHeader>
   )
 }
