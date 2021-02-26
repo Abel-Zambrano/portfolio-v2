@@ -1,6 +1,6 @@
 import React from "react"
 import GlobalStyles from "../globalStyles"
-import Welcome from "../components/Welcome"
+import WelcomeBackground from "../components/WelcomeBackground"
 
 import Layout from "../components/Layout"
 
@@ -8,7 +8,7 @@ const IndexPage = () => (
   <>
     <GlobalStyles />
     <Layout>
-      <Welcome />
+      <WelcomeBackground />
     </Layout>
   </>
 )
