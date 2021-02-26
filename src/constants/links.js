@@ -22,15 +22,3 @@ const links = [
 ]
 
 export default links
-
-// const navLinks = data.map(link => {
-//   return (
-//     <li>
-//       <Link to={link.url}>{link.text}</Link>
-//     </li>
-//   )
-// })
-
-// export default ({ className }) => {
-//   return <ul>{navLinks}</ul>
-// }

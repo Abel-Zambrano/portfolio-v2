@@ -20,7 +20,7 @@ const Title = styled.div`
   font-size: 1.4rem;
   font-weight: 400;
   color: var(--color-white);
-  text-transform: uppercase;
+  text-transform: capitalize;
 `
 
 const Header = props => {

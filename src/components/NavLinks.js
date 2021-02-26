@@ -18,7 +18,7 @@ const StyledLink = styled(Link)`
   color: var(--color-white);
   text-decoration: none;
   font-size: 1.8rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
 
   &:hover {
     color: var(--color-primary);
@@ -26,14 +26,12 @@ const StyledLink = styled(Link)`
 `
 
 const NavLink = () => {
-  console.log(links)
-
   return (
     <>
       <StyledNav>
         {links.map(link => {
           return (
-            <Li>
+            <Li key={link.id}>
               <StyledLink to={link.url}>{link.text}</StyledLink>
             </Li>
           )
