@@ -8,7 +8,6 @@ const IndexPage = () => (
   <>
     <GlobalStyles />
     <Layout>
-      <p>index page</p>
       <Welcome />
     </Layout>
   </>
