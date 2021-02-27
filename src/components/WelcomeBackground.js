@@ -1,20 +1,21 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
+import Img from "gatsby-image"
 import styled from "styled-components"
 
-const BackgroundWrapper = styled.div``
-
-const StyledImage = styled(Image)`
-  max-height: 70vh;
+const BackgroundWrapper = styled.div`
+  height: 70vh;
+  width: 100vw;
 `
+
+const StyledImg = styled(Img)``
 
 const WelcomeBackground = () => {
   const data = useStaticQuery(graphql`
     {
       file(relativePath: { eq: "forest.jpg" }) {
         childImageSharp {
-          fluid(quality: 100) {
+          fluid(quality: 95) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
@@ -23,7 +24,11 @@ const WelcomeBackground = () => {
   `)
   return (
     <BackgroundWrapper>
-      <StyledImage fluid={data.file.childImageSharp.fluid} />
+      <StyledImg
+        style={{ height: "100%", width: "100%" }}
+        imgStyle={{ objectFit: "conatin" }}
+        fluid={data.file.childImageSharp.fluid}
+      />
     </BackgroundWrapper>
   )
 }
