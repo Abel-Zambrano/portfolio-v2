@@ -1,19 +1,63 @@
 import React, { useState, useEffect } from "react"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
+
+const textAnimation = keyframes`
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+`
+
+const smallTextAnimation = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+
+  /* 50% {
+    opacity: 0;
+  } */
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+`
 
 const WelcomeTextWrapper = styled.div``
 
-const Text = styled.h1`
+const Text1 = styled.h1`
+  visibility: hidden;
   color: var(--color-white);
   font-size: 5rem;
   font-weight: 200;
   line-height: 8rem;
+  animation: ${textAnimation} 2s ease-in-out;
+  animation-fill-mode: forwards;
+`
+
+const Text2 = styled.h1`
+  visibility: hidden;
+  color: var(--color-white);
+  font-size: 5rem;
+  font-weight: 200;
+  line-height: 8rem;
+  animation: ${textAnimation} 2s ease-in-out 1.5s;
+  animation-fill-mode: forwards;
 `
 
 const SmallText = styled.p`
+  visibility: hidden;
   color: var(--color-white);
   font-size: 2rem;
   line-height: 8rem;
+  animation: ${smallTextAnimation} 1s ease-out 3s;
+  animation-fill-mode: forwards;
 `
 
 const WelcomeText = () => {
@@ -37,8 +81,8 @@ const WelcomeText = () => {
 
   return (
     <WelcomeTextWrapper>
-      <Text>{`${welcome}, I'm Abel!`}</Text>
-      <Text>Welcome to my Portfolio</Text>
+      <Text1>{`${welcome}, I'm Abel!`}</Text1>
+      <Text2>Welcome to my Portfolio</Text2>
       <SmallText>Front-End Developer/UI</SmallText>
     </WelcomeTextWrapper>
   )

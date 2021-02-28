@@ -19,7 +19,7 @@ const WelcomeBackground = ({ children }) => {
       file(relativePath: { eq: "forest.jpg" }) {
         childImageSharp {
           fluid(quality: 95) {
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluid
           }
         }
       }
