@@ -1,13 +1,22 @@
 import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 
-const WelcomeWrapper = styled.div``
+const WelcomeTextWrapper = styled.div``
 
-const Text = styled.p``
+const Text = styled.h1`
+  color: var(--color-white);
+  font-size: 5rem;
+  font-weight: 200;
+  line-height: 8rem;
+`
 
-const SmallText = styled.p``
+const SmallText = styled.p`
+  color: var(--color-white);
+  font-size: 2rem;
+  line-height: 8rem;
+`
 
-const Welcome = () => {
+const WelcomeText = () => {
   const [welcome, setWelcome] = useState("")
 
   const today = new Date().getHours()
@@ -27,12 +36,12 @@ const Welcome = () => {
   })
 
   return (
-    <WelcomeWrapper>
+    <WelcomeTextWrapper>
       <Text>{`${welcome}, I'm Abel!`}</Text>
-      <Text>Welcome to my Portfolio!</Text>
+      <Text>Welcome to my Portfolio</Text>
       <SmallText>Front-End Developer/UI</SmallText>
-    </WelcomeWrapper>
+    </WelcomeTextWrapper>
   )
 }
 
-export default Welcome
+export default WelcomeText
