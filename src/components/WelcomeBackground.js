@@ -5,15 +5,11 @@ import styled from "styled-components"
 import BackgroundImage from "gatsby-background-image"
 
 const StyledBackgroundImage = styled(BackgroundImage)`
-  width: 100vw;
-  height: 80vh;
-  object-fit: cover;
-  opacity: 1 !important;
-  background: linear-gradient(
-    to right bottom,
-    rgba(255, 255, 255, 0.2) 10%,
-    rgba(0, 0, 0, 0.9) 90%
-  );
+  width: 100%;
+  height: 70vh;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 `
 
 const WelcomeBackground = () => {
