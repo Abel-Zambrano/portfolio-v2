@@ -1,14 +1,17 @@
 import React from "react"
 import GlobalStyles from "../globalStyles"
-import WelcomeBackground from "../components/WelcomeBackground"
 
 import Layout from "../components/Layout"
+import WelcomeBackground from "../components/WelcomeBackground"
+import BlackOverlay from "../components/BlackOverlay"
 
 const IndexPage = () => (
   <>
     <GlobalStyles />
     <Layout>
-      <WelcomeBackground />
+      <WelcomeBackground>
+        <BlackOverlay></BlackOverlay>
+      </WelcomeBackground>
     </Layout>
   </>
 )

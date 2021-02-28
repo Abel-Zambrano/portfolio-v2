@@ -6,13 +6,14 @@ import BackgroundImage from "gatsby-background-image"
 
 const StyledBackgroundImage = styled(BackgroundImage)`
   width: 100%;
-  height: 70vh;
-  background-size: 100% 100%;
+  height: 60vh;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: fill;
+  background-size: cover;
 `
 
-const WelcomeBackground = () => {
+const WelcomeBackground = ({ children }) => {
   const data = useStaticQuery(graphql`
     {
       file(relativePath: { eq: "forest.jpg" }) {
@@ -28,9 +29,7 @@ const WelcomeBackground = () => {
   const imageData = data.file.childImageSharp.fluid
 
   return (
-    <StyledBackgroundImage fluid={imageData}>
-      <h2>Background Image</h2>
-    </StyledBackgroundImage>
+    <StyledBackgroundImage fluid={imageData}>{children}</StyledBackgroundImage>
   )
 }
 
