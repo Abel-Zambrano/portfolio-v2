@@ -7,7 +7,7 @@ import BlackOverlay from "../components/BlackOverlay"
 import WelcomeText from "../components/WelcomeText"
 import Section from "../components/Section"
 import Content from "../components/Content"
-import Bio from "../components/Bio"
+import About from "../components/About"
 
 const IndexPage = () => (
   <>
@@ -19,7 +19,7 @@ const IndexPage = () => (
         </BlackOverlay>
         <Content>
           <Section>
-            <Bio />
+            <About />
           </Section>
         </Content>
       </WelcomeBackground>
