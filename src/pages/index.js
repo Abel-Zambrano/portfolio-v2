@@ -5,6 +5,9 @@ import Layout from "../components/Layout"
 import WelcomeBackground from "../components/WelcomeBackground"
 import BlackOverlay from "../components/BlackOverlay"
 import WelcomeText from "../components/WelcomeText"
+import Section from "../components/Section"
+import Content from "../components/Content"
+import Bio from "../components/Bio"
 
 const IndexPage = () => (
   <>
@@ -14,6 +17,11 @@ const IndexPage = () => (
         <BlackOverlay>
           <WelcomeText />
         </BlackOverlay>
+        <Content>
+          <Section>
+            <Bio />
+          </Section>
+        </Content>
       </WelcomeBackground>
     </Layout>
   </>
