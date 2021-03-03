@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import CardTitle from "./CardTitle"
+import Avatar from "./Avatar"
 
 import aboutData from "../JS/about"
 
@@ -10,7 +11,6 @@ const StyledAbout = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
 `
 
 const Text = styled.p`
@@ -26,6 +26,7 @@ const About = () => {
   return (
     <StyledAbout>
       <CardTitle>{aboutData.title}</CardTitle>
+      <Avatar />
       <Text>
         {aboutData.infoStart}
         <SpanFocus>{aboutData.infoSpan}</SpanFocus>

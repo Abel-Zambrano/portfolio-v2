@@ -8,7 +8,6 @@ const StyledContent = styled.div`
   width: 100vw;
   height: 100vh;
   align-items: center;
-  position: absolute;
 `
 
 const Content = ({ children }) => {

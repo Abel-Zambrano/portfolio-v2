@@ -6,6 +6,7 @@ const StyledSection = styled.section`
   margin: 24rem auto;
   width: 98vw;
   height: 50rem;
+  position: relative;
 `
 
 const Section = ({ children }) => {
