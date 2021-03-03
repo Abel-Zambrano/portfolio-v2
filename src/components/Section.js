@@ -6,7 +6,7 @@ const StyledSection = styled.section`
   margin: 24rem auto;
   width: 98vw;
   height: 50rem;
-  position: relative;
+  box-shadow: inset 0 0 1rem var(--color-gray-dark);
 `
 
 const Section = ({ children }) => {
