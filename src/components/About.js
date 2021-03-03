@@ -5,11 +5,12 @@ import CardTitle from "./CardTitle"
 
 import aboutData from "../JS/about"
 
-const StyledBio = styled.article`
+const StyledAbout = styled.article`
   margin: 20rem auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 `
 
 const Text = styled.p`
@@ -17,13 +18,21 @@ const Text = styled.p`
   color: var(--color-white);
 `
 
-const Bio = () => {
+const SpanFocus = styled.span`
+  color: var(--color-primary);
+`
+
+const About = () => {
   return (
-    <StyledBio>
+    <StyledAbout>
       <CardTitle>{aboutData.title}</CardTitle>
-      <Text>{aboutData.info}</Text>
-    </StyledBio>
+      <Text>
+        {aboutData.infoStart}
+        <SpanFocus>{aboutData.infoSpan}</SpanFocus>
+        {aboutData.infoEnd}
+      </Text>
+    </StyledAbout>
   )
 }
 
-export default Bio
+export default About
