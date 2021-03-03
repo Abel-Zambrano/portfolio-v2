@@ -5,7 +5,7 @@ import styled from "styled-components"
 const StyledTitle = styled.h1`
   font-size: 3rem;
   font-weight: 400;
-  color: var(--color-white);
+  color: var(--color-primary);
   text-transform: capitalize;
 `
 

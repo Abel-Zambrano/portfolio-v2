@@ -5,10 +5,12 @@ const StyledSection = styled.section`
   background-color: var(--color-gray-light);
   display: flex;
   flex-direction: column;
-  align-content: center;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
   margin: 24rem auto;
   width: 98vw;
-  height: 50rem;
+  height: 54rem;
 `
 
 const Section = ({ children }) => {

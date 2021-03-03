@@ -7,7 +7,9 @@ import Avatar from "./Avatar"
 import aboutData from "../JS/about"
 
 const Text = styled.p`
-  font-size: 1.2rem;
+  line-height: 2rem;
+  max-width: 58rem;
+  font-size: 1.52rem;
   color: var(--color-white);
 `
 
