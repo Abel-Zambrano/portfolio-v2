@@ -8,6 +8,7 @@ import WelcomeText from "../components/WelcomeText"
 import Section from "../components/Section"
 import Content from "../components/Content"
 import About from "../components/About"
+import Skills from "../components/Skills"
 
 const IndexPage = () => (
   <>
@@ -20,6 +21,9 @@ const IndexPage = () => (
         <Content>
           <Section>
             <About />
+          </Section>
+          <Section>
+            <Skills />
           </Section>
         </Content>
       </WelcomeBackground>

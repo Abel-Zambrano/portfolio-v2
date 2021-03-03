@@ -1,4 +1,5 @@
 const skillsData = {
+  title: "skills",
   details: "",
   logos: [
     "html",
@@ -13,3 +14,5 @@ const skillsData = {
     "mysql",
   ],
 }
+
+export default skillsData
