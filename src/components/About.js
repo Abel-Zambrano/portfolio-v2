@@ -6,13 +6,6 @@ import Avatar from "./Avatar"
 
 import aboutData from "../JS/about"
 
-const StyledAbout = styled.article`
-  margin: 20rem auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
-
 const Text = styled.p`
   font-size: 1.2rem;
   color: var(--color-white);
@@ -24,7 +17,7 @@ const SpanFocus = styled.span`
 
 const About = () => {
   return (
-    <StyledAbout>
+    <>
       <CardTitle>{aboutData.title}</CardTitle>
       <Avatar />
       <Text>
@@ -32,7 +25,7 @@ const About = () => {
         <SpanFocus>{aboutData.infoSpan}</SpanFocus>
         {aboutData.infoEnd}
       </Text>
-    </StyledAbout>
+    </>
   )
 }
 
