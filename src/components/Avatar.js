@@ -5,8 +5,8 @@ import Image from "gatsby-image"
 
 const StyledImage = styled(Image)`
   border-radius: 50%;
-  max-width: 24rem;
-  max-height: 24rem;
+  max-width: 20rem;
+  max-height: 20rem;
 `
 
 const Avatar = () => {

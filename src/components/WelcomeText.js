@@ -52,6 +52,7 @@ const Text2 = styled.h1`
 `
 
 const SmallText = styled.p`
+  font-family: "Roboto Mono", monospace;
   visibility: hidden;
   color: var(--color-white);
   font-size: 2rem;
@@ -83,7 +84,7 @@ const WelcomeText = () => {
     <WelcomeTextWrapper>
       <Text1>{`${welcome}, I'm Abel!`}</Text1>
       <Text2>Welcome to my Portfolio</Text2>
-      <SmallText>Front-End Developer/UI</SmallText>
+      <SmallText>Front-End Developer / UI</SmallText>
     </WelcomeTextWrapper>
   )
 }

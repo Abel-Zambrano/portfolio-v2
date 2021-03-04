@@ -30,11 +30,11 @@ html {
 }
 
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
 }
 
-h1 {
+/* h1 {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
 }
@@ -42,10 +42,10 @@ h1 {
 h2{
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-}
+} */
 
-p{
+/* p{
     font-family: 'Roboto Mono', monospace;
-}
+} */
 `
 export default GlobalStyles
