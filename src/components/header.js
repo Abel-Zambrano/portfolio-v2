@@ -24,8 +24,8 @@ const Title = styled.div`
   text-transform: uppercase;
 `
 
-const StyledCardTitle = styled(CardTitle)`
-  color: var(--color-white) !important;
+const Name = styled.h1`
+  color: var(--color-white);
 `
 
 const Header = props => {
@@ -49,7 +49,7 @@ const Header = props => {
             style={{ width: "8rem" }}
             fluid={data.file.childImageSharp.fluid}
           />
-          <StyledCardTitle>abel zambrano</StyledCardTitle>
+          <Name>abel zambrano</Name>
         </Title>
         <NavLinks />
       </HeaderContainer>

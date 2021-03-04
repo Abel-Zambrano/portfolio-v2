@@ -9,8 +9,8 @@ const StyledTitle = styled.h1`
   text-transform: uppercase;
 `
 
-const CardTitle = ({ children, className }) => {
-  return <StyledTitle className={props.className}>{children}</StyledTitle>
+const CardTitle = ({ children }) => {
+  return <StyledTitle>{children}</StyledTitle>
 }
 
 export default CardTitle
