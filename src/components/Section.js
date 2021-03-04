@@ -9,9 +9,7 @@ const StyledSection = styled.section`
   margin: 24rem auto;
   width: 98vw;
   height: 54rem;
-
   text-align: center;
-
   background-color: var(--color-gray-light);
 `
 
