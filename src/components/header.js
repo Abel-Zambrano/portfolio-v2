@@ -26,6 +26,7 @@ const Title = styled.div`
 
 const Name = styled.h1`
   color: var(--color-white);
+  font-weight: 200;
 `
 
 const Header = props => {
