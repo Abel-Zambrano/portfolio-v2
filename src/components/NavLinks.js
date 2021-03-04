@@ -18,7 +18,7 @@ const StyledLink = styled(Link)`
   color: var(--color-white);
   text-decoration: none;
   font-size: 1.8rem;
-  text-transform: capitalize;
+  text-transform: uppercase;
 
   &:hover {
     color: var(--color-primary);

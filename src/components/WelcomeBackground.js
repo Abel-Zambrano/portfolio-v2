@@ -11,6 +11,7 @@ const StyledBackgroundImage = styled(BackgroundImage)`
   background-repeat: no-repeat;
   background-size: fill;
   background-size: cover;
+  background-attachment: fixed;
 `
 
 const WelcomeBackground = ({ children }) => {

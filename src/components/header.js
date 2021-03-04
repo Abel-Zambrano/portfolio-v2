@@ -1,8 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+
+import Image from "gatsby-image"
 import NavLinks from "./NavLinks"
+import CardTitle from "./CardTitle"
 
 const StyledHeader = styled.div`
   background-color: var(--color-jetblack);
@@ -18,9 +20,12 @@ const Title = styled.div`
   display: flex;
   align-items: center;
   font-size: 1.4rem;
-  font-weight: 400;
   color: var(--color-white);
-  text-transform: capitalize;
+  text-transform: uppercase;
+`
+
+const StyledCardTitle = styled(CardTitle)`
+  color: var(--color-white) !important;
 `
 
 const Header = props => {
@@ -40,11 +45,11 @@ const Header = props => {
     <StyledHeader>
       <HeaderContainer>
         <Title>
-          <Img
+          <Image
             style={{ width: "8rem" }}
             fluid={data.file.childImageSharp.fluid}
           />
-          <h1>Abel Zambrano</h1>
+          <StyledCardTitle>abel zambrano</StyledCardTitle>
         </Title>
         <NavLinks />
       </HeaderContainer>
