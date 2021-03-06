@@ -18,15 +18,15 @@ const IndexPage = () => (
         <BlackOverlay>
           <WelcomeText />
         </BlackOverlay>
-        <Content>
-          <Section>
-            <About />
-          </Section>
-          <Section>
-            <Skills />
-          </Section>
-        </Content>
       </WelcomeBackground>
+      <Content>
+        <Section>
+          <About />
+        </Section>
+        <Section>
+          <Skills />
+        </Section>
+      </Content>
     </Layout>
   </>
 )
