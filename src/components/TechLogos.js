@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { IconName } from "react-icons/si"
+import { SiMercedes } from "@react-icons/all-files/si/SiMercedes"
 import skillsData from "../JS/skills"
 
 const StyledTechLogos = styled.ul`
@@ -12,9 +12,10 @@ const StyledTechLogos = styled.ul`
 const TechLogos = () => {
   return (
     <StyledTechLogos>
-      {/* {skillsData.logos.map(logo => {
-        return <li>{logo}</li>
-      })} */}
+      <SiMercedes />
+      {skillsData.map(logo => {
+        return <li key={logo.id}>{logo.name}</li>
+      })}
     </StyledTechLogos>
   )
 }
