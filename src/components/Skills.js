@@ -21,7 +21,13 @@ const TechWrapper = styled.div`
 
 const TechText = styled.p``
 
-const TechLogos = styled.div``
+const TechLogos = styled.ul`
+  list-style: none;
+  text-transform: uppercase;
+  color: var(--color-pink);
+`
+
+console.log(skillsData)
 
 const Skills = () => {
   return (
@@ -29,7 +35,11 @@ const Skills = () => {
       <CardTitle>{skillsData.title}</CardTitle>
       <TechWrapper>
         <TechText>text</TechText>
-        <TechLogos>logos</TechLogos>
+        <TechLogos>
+          {skillsData.logos.map(logo => {
+            return <li>{logo}</li>
+          })}
+        </TechLogos>
       </TechWrapper>
     </SkillsWrapper>
   )

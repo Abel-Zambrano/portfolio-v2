@@ -11,6 +11,7 @@ const GlobalStyles = createGlobalStyle`
     --color-gray-dark:  #262626;
     --color-gray-light:  #404040;
     --color-white:  #ffffff;
+    --color-pink:   #f565f6;
 }
 
 *{

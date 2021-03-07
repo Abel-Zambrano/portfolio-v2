@@ -4,10 +4,13 @@ const skillsData = {
   logos: [
     "html",
     "css",
+    "sass",
+    "styled-components",
     "javascript",
     "react",
     "gatsby",
     "graphql",
+    "github",
     "node.js",
     "mongodb",
     "python",
