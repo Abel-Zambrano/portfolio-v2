@@ -2,7 +2,7 @@ const skillsData = [
   {
     id: 1,
     name: "html",
-    logo: "SiHtml5",
+    logo: "src/images/icons/html5.png",
   },
   {
     id: 2,

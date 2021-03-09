@@ -7,7 +7,18 @@ const StyledTechLogos = styled.ul`
 `
 
 const TechLogos = () => {
-  return <StyledTechLogos></StyledTechLogos>
+  return (
+    <StyledTechLogos>
+      {skillsData.map(skill => {
+        return (
+          <li>
+            <img src={skill.logo} alt={skill.name} />
+            {skill.name}
+          </li>
+        )
+      })}
+    </StyledTechLogos>
+  )
 }
 
 export default TechLogos
