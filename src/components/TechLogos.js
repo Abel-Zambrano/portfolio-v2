@@ -4,23 +4,24 @@ import skillsData from "../JS/skills"
 
 const StyledTechLogos = styled.ul`
   display: grid;
-  grid-column: auto auto;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 3rem;
   list-style: none;
+  color: var(--color-primary-dark);
 `
 
-const Icon = styled.div``
-
-const IconText = styled.p``
+const Icon = styled.div`
+  font-size: 3.5rem;
+`
 
 const TechLogos = () => {
   return (
     <StyledTechLogos>
       {skillsData.map(skill => {
-        const { logo, name } = skill
+        const { logo } = skill
         return (
           <li>
             <Icon>{logo}</Icon>
-            <IconText>{name}</IconText>
           </li>
         )
       })}
