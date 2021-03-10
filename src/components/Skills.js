@@ -1,10 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-
 import CardTitle from "./CardTitle"
 import TechLogos from "./TechLogos"
-
-import skillsData from "../JS/skills"
+import data from "../JS/data"
 
 const SkillsWrapper = styled.article`
   display: flex;
@@ -18,7 +16,7 @@ const SkillsWrapper = styled.article`
 const Skills = () => {
   return (
     <SkillsWrapper>
-      <CardTitle>{skillsData.title}</CardTitle>
+      <CardTitle>{data[1].title}</CardTitle>
       <TechLogos />
     </SkillsWrapper>
   )

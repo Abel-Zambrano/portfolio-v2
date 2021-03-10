@@ -1,10 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-
 import CardTitle from "./CardTitle"
 import Avatar from "./Avatar"
-
-import aboutData from "../JS/about"
+import data from "../JS/data"
 
 const AboutWrapper = styled.article`
   display: flex;
@@ -30,12 +28,12 @@ const SpanFocus = styled.span`
 const About = () => {
   return (
     <AboutWrapper>
-      <CardTitle>{aboutData.title}</CardTitle>
+      <CardTitle>{data[0].title}</CardTitle>
       <Avatar />
       <Text>
-        {aboutData.infoStart}
-        <SpanFocus>{aboutData.infoSpan}</SpanFocus>
-        {aboutData.infoEnd}
+        {data[0].infoStart}
+        <SpanFocus>{data[0].infoSpan}</SpanFocus>
+        {data[0].infoEnd}
       </Text>
     </AboutWrapper>
   )
