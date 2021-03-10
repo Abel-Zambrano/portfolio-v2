@@ -18,10 +18,10 @@ const TechLogos = () => {
   return (
     <StyledTechLogos>
       {skillsData.map(skill => {
-        const { logo } = skill
+        const { id, logo } = skill
         return (
           <li>
-            <Icon>{logo}</Icon>
+            <Icon key={id}>{logo}</Icon>
           </li>
         )
       })}

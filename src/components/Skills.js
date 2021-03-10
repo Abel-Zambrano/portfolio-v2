@@ -1,12 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import CardTitle from "./CardTitle"
+import TechText from "./TechText"
 import TechLogos from "./TechLogos"
 import data from "../JS/data"
 
 const SkillsWrapper = styled.article`
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   text-align: center;
@@ -15,10 +15,13 @@ const SkillsWrapper = styled.article`
 `
 const Skills = () => {
   return (
-    <SkillsWrapper>
+    <>
       <CardTitle>{data[1].title}</CardTitle>
-      <TechLogos />
-    </SkillsWrapper>
+      <SkillsWrapper>
+        <TechText />
+        <TechLogos />
+      </SkillsWrapper>
+    </>
   )
 }
 

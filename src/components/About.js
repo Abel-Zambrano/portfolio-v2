@@ -7,7 +7,7 @@ import data from "../JS/data"
 const AboutWrapper = styled.article`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   text-align: center;
   height: 100%;
