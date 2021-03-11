@@ -15,7 +15,7 @@ const SkillsWrapper = styled.article`
   width: 100%;
 `
 const Content = styled.div`
-  width: 100%;
+  width: 100rem;
   display: flex;
   justify-content: space-evenly;
 `

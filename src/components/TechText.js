@@ -2,38 +2,52 @@ import React from "react"
 import styled from "styled-components"
 import skillsData from "../JS/skills"
 
-const frontEndSkills = skillsData.slice(0, 9)
+const frontEndSkills = skillsData.slice(0, 8)
 
-const fName = frontEndSkills.map(skill => {
+const techName = frontEndSkills.map(skill => {
   return skill.name
 })
 
-console.log(frontEndSkills[0].name)
+const newTechName = techName.join(", ")
 
-console.log(frontEndSkills)
+const backEndSkills = skillsData.slice(8, 13)
 
-const TechTextWrapper = styled.div``
+const bTechName = backEndSkills.map(skill => {
+  return skill.name
+})
+
+const newBTechName = bTechName.join(", ")
+
+const TechTextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+`
 
 const Text = styled.p`
   max-width: 58rem;
   line-height: 2rem;
   font-size: 1.52rem;
+  font-weight: 700;
   color: var(--color-jetblack);
-  margin: 1rem auto;
+  text-align: start;
 `
 const Span = styled.span`
   font-family: "Roboto Mono", monospace;
   color: var(--color-primary-dark);
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  text-align: right;
 `
 
 const TechText = () => {
   return (
     <TechTextWrapper>
       <Text>
-        Front-End Skills: <Span>{fName}</Span>
+        Front-End Skills: <Span>{newTechName}</Span>
       </Text>
       <Text>
-        Back-End Skills: <Span></Span>
+        Back-End Skills: <Span>{newBTechName}</Span>
       </Text>
     </TechTextWrapper>
   )

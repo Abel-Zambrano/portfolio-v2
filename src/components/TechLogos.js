@@ -11,7 +11,7 @@ const StyledTechLogos = styled.ul`
 `
 
 const Icon = styled.div`
-  font-size: 3.5rem;
+  font-size: 4rem;
 `
 
 const TechLogos = () => {
