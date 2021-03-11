@@ -40,14 +40,22 @@ const Span = styled.span`
   text-align: right;
 `
 
+const SpanContainer = styled.div``
+
 const TechText = () => {
   return (
     <TechTextWrapper>
       <Text>
-        Front-End Skills: <Span>{newTechName}</Span>
+        Front-End Skills
+        <SpanContainer>
+          <Span>{newTechName}</Span>
+        </SpanContainer>
       </Text>
       <Text>
-        Back-End Skills: <Span>{newBTechName}</Span>
+        Back-End Skills
+        <SpanContainer>
+          <Span>{newBTechName}</Span>
+        </SpanContainer>
       </Text>
     </TechTextWrapper>
   )
