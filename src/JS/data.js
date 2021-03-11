@@ -1,5 +1,3 @@
-import skillsData from "./skills"
-
 const data = [
   {
     title: "about",
