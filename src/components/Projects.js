@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import CardTitle from "./CardTitle"
+import ScreenShot from "./ScreenShot"
 import data from "../JS/data"
 
 const ProjectsWrapper = styled.div`
@@ -17,6 +18,7 @@ const Projects = () => {
   return (
     <ProjectsWrapper>
       <CardTitle>{data[2].title}</CardTitle>
+      <ScreenShot />
     </ProjectsWrapper>
   )
 }
