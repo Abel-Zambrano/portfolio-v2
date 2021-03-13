@@ -9,8 +9,6 @@ const StyledBackgroundImage = styled(BackgroundImage)`
   height: 84vh;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: fill;
-  background-size: cover;
   background-attachment: fixed;
 `
 

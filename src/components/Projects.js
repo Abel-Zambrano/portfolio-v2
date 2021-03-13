@@ -18,7 +18,7 @@ const Projects = () => {
   return (
     <ProjectsWrapper>
       <CardTitle>{data[2].title}</CardTitle>
-      <ScreenShot />
+      <ScreenShot></ScreenShot>
     </ProjectsWrapper>
   )
 }
