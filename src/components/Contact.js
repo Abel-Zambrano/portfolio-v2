@@ -20,7 +20,7 @@ const LogoContainer = styled.div``
 
 const Mail = styled(SiMinutemailer)`
   font-size: 10rem;
-  color: var(--color-gray-dark);
+  color: var(--color---color-jetblack);
 `
 
 const Text = styled.p`

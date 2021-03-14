@@ -8,8 +8,8 @@ const GlobalStyles = createGlobalStyle`
     --color-primary-light:  #00ffff;
     --color-primary-dark:  #009999;
     --color-jetblack:  #000000;
-    --color-gray-dark:  #262626;
-    --color-gray-light:  #404040;
+    --color-gray-dark:    #4d4d4d;
+    --color-gray-light: #f2f2f2;
     --color-white:  #ffffff;
     --color-pink:   #f565f6;
 }
