@@ -11,6 +11,7 @@ import About from "../components/About"
 import Skills from "../components/Skills"
 import Projects from "../components/Projects"
 import ScreenShot from "../components/ScreenShot"
+import Contact from "../components/Contact"
 
 const IndexPage = () => (
   <>
@@ -30,6 +31,9 @@ const IndexPage = () => (
         </Section>
         <Section>
           <Projects />
+        </Section>
+        <Section>
+          <Contact />
         </Section>
       </Content>
     </Layout>
