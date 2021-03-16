@@ -30,12 +30,34 @@ const Text = styled.p`
   color: var(--color-jetblack);
 `
 
+const Button = styled.button`
+  text-transform: uppercase;
+  font-size: 2rem;
+  padding: 3rem 6rem;
+  color: var(--color-primary-dark);
+  border: 2px solid var(--color-primary-dark);
+  transition: 0.2s;
+
+  &:hover {
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 10rem rgba(0, 0, 0, 0.2);
+  }
+`
+
 const Contact = () => {
   return (
     <Div>
       <CardTitle>{data[3].title}</CardTitle>
       <Mail />
       <Text>{data[3].text}</Text>
+      <Button>connect</Button>
     </Div>
   )
 }

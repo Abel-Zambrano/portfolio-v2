@@ -27,6 +27,13 @@ const LinkedIn = styled(FaLinkedinIn)`
   background-color: var(--color-gray-dark);
   margin: 0.2rem;
   padding: 0.5rem 0.5rem;
+  transition: 0.2s;
+
+  &:hover {
+    color: var(--color-white);
+    background-color: var(--color-linkedin);
+    transform: scale(1.1);
+  }
 `
 
 const Github = styled(FaGithub)`
@@ -35,6 +42,13 @@ const Github = styled(FaGithub)`
   background-color: var(--color-gray-dark);
   margin: 0.2rem;
   padding: 0.5rem 0.5rem;
+  transition: 0.2s;
+
+  &:hover {
+    color: var(--color-jetblack);
+    background-color: var(--color-white);
+    transform: scale(1.1);
+  }
 `
 
 const Text = styled.p`
@@ -46,8 +60,20 @@ const Footer = () => {
   return (
     <StyledFooter>
       <IconContainer>
-        <LinkedIn />
-        <Github />
+        <a
+          href="https://www.linkedin.com/in/abel-zambrano/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <LinkedIn />
+        </a>
+        <a
+          href="https://github.com/Abel-Zambrano"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Github />
+        </a>
       </IconContainer>
       <Text>&copy; Abel Zambrano 2021</Text>
     </StyledFooter>
