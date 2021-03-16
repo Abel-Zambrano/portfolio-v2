@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 import CardTitle from "./CardTitle"
 import data from "../JS/data"
@@ -57,7 +58,9 @@ const Contact = () => {
       <CardTitle>{data[3].title}</CardTitle>
       <Mail />
       <Text>{data[3].text}</Text>
-      <Button>connect</Button>
+      <Link to="/connect/">
+        <Button>connect</Button>
+      </Link>
     </Div>
   )
 }

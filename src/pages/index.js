@@ -10,7 +10,6 @@ import Content from "../components/Content"
 import About from "../components/About"
 import Skills from "../components/Skills"
 import Projects from "../components/Projects"
-import ScreenShot from "../components/ScreenShot"
 import Contact from "../components/Contact"
 
 const IndexPage = () => (

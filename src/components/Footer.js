@@ -13,6 +13,7 @@ const StyledFooter = styled.footer`
   margin-top: 6rem;
   text-align: center;
   background-color: var(--color-jetblack);
+  bottom: 0;
 `
 
 const IconContainer = styled.div`
