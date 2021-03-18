@@ -7,6 +7,11 @@ import Content from "../components/Content"
 import HandshakeImage from "../components/HandshakeImage"
 import Form from "../components/Form"
 
+const StyledContent = styled(Content)`
+  background-color: red;
+  height: 90vh;
+`
+
 const Div = styled.div`
   display: flex;
 `
@@ -28,7 +33,7 @@ const connect = () => {
     <>
       <GlobalStyles />
       <Layout>
-        <Content>
+        <StyledContent>
           <Div>
             <LeftContent>
               <StyledImage />
@@ -37,7 +42,7 @@ const connect = () => {
               <Form />
             </RightContent>
           </Div>
-        </Content>
+        </StyledContent>
       </Layout>
     </>
   )

@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 const StyledForm = styled.form`
   font-size: 1.2rem;
+  margin: 4rem auto;
 `
 
 const Column = styled.div`
@@ -14,17 +15,24 @@ const Label = styled.label`
   text-transform: uppercase;
 `
 
-const SmallInput = styled.input`
-  margin-top: 0.6rem;
-  margin-bottom: 0.3rem;
-  height: 2.5rem;
-  font-size: 1.4rem;
-`
-
 const Input = styled.input`
   margin-top: 0.6rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 2rem;
   height: 2.5rem;
+  font-size: 1.4rem;
+  border: 0;
+  border-bottom: 2px solid var(--color-primary);
+  background: transparent;
+`
+
+const TextArea = styled.textarea`
+  margin-top: 0.6rem;
+  margin-bottom: 2rem;
+  font-family: inherit;
+  font-size: 1.4rem;
+  height: 20rem;
+  border: 0;
+  border-bottom: 2px solid var(--color-primary);
 `
 
 const NameDiv = styled.div`
@@ -34,6 +42,7 @@ const NameDiv = styled.div`
 
 const Row = styled.div`
   display: flex;
+  justify-content: space-between;
 `
 
 const Button = styled.button`
@@ -49,11 +58,11 @@ const Form = () => {
           <Row>
             <NameDiv>
               <Label for="fname">first name</Label>
-              <SmallInput type="text" name="fname" />
+              <Input type="text" name="fname" />
             </NameDiv>
             <NameDiv>
               <Label for="lname">last name</Label>
-              <SmallInput type="text" name="lname" />
+              <Input type="text" name="lname" />
             </NameDiv>
           </Row>
           <Label for="email">email</Label>
@@ -61,7 +70,7 @@ const Form = () => {
           <Label for="email">message</Label>
           <Input type="email" name="message" />
           <Label for="details">additional details</Label>
-          <textarea type="email" name="details" cols="30" rows="10" />
+          <TextArea type="email" name="details" cols="30" rows="10" />
           <Button>send</Button>
         </Column>
       </StyledForm>

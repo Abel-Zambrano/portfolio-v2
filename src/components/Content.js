@@ -7,8 +7,8 @@ const StyledContent = styled.div`
   align-items: center;
 `
 
-const Content = ({ children }) => {
-  return <StyledContent>{children}</StyledContent>
+const Content = ({ children, className }) => {
+  return <StyledContent className={className}>{children}</StyledContent>
 }
 
 export default Content
