@@ -1,7 +1,27 @@
 import React from "react"
+import styled from "styled-components"
 import GlobalStyles from "../globalStyles"
+
 import Layout from "../components/Layout"
 import Content from "../components/Content"
+import HandshakeImage from "../components/HandshakeImage"
+import Form from "../components/Form"
+
+const Div = styled.div`
+  display: flex;
+`
+
+const LeftContent = styled.div`
+  background-color: red;
+  height: 70vh;
+`
+
+const StyledImage = styled(HandshakeImage)`
+  height: 100%;
+  width: 40rem;
+`
+
+const RightContent = styled.div``
 
 const connect = () => {
   return (
@@ -9,7 +29,14 @@ const connect = () => {
       <GlobalStyles />
       <Layout>
         <Content>
-          <h1>Connect page</h1>
+          <Div>
+            <LeftContent>
+              <StyledImage />
+            </LeftContent>
+            <RightContent>
+              <Form />
+            </RightContent>
+          </Div>
         </Content>
       </Layout>
     </>
