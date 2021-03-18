@@ -17,11 +17,16 @@ const Div = styled.article`
 
 const Title = styled(CardTitle)``
 
-const LogoContainer = styled.div``
+const IconBackground = styled.div`
+  background-color: var(--color-primary-dark);
+  border-radius: 50%;
+  padding: 3rem 3rem;
+  text-align: center;
+`
 
 const Mail = styled(SiMinutemailer)`
   font-size: 10rem;
-  color: var(--color---color-jetblack);
+  color: var(--color-white);
 `
 
 const Text = styled.p`
@@ -56,7 +61,9 @@ const Contact = () => {
   return (
     <Div>
       <CardTitle>{data[3].title}</CardTitle>
-      <Mail />
+      <IconBackground>
+        <Mail />
+      </IconBackground>
       <Text>{data[3].text}</Text>
       <Link to="/connect/">
         <Button>connect</Button>
