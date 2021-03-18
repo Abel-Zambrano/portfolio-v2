@@ -2,6 +2,8 @@ import React from "react"
 import styled from "styled-components"
 
 const StyledForm = styled.form`
+  background-color: var(--color-white);
+  padding: 4rem 2rem;
   font-size: 1.2rem;
   margin: 4rem auto;
 `

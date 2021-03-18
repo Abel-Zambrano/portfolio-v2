@@ -8,7 +8,7 @@ import HandshakeImage from "../components/HandshakeImage"
 import Form from "../components/Form"
 
 const StyledContent = styled(Content)`
-  background-color: red;
+  background-color: var(--color-gray-light);
   height: 90vh;
 `
 
@@ -17,7 +17,6 @@ const Div = styled.div`
 `
 
 const LeftContent = styled.div`
-  background-color: red;
   height: 70vh;
 `
 

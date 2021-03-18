@@ -10,7 +10,7 @@ const StyledFooter = styled.footer`
   align-items: center;
   height: 20rem;
   width: 100%;
-  margin-top: 6rem;
+  /* margin-top: 6rem; */
   text-align: center;
   background-color: var(--color-jetblack);
   bottom: 0;
