@@ -68,8 +68,8 @@ const Form = () => {
           </Row>
           <Label for="email">email</Label>
           <Input type="email" name="email" />
-          <Label for="email">message</Label>
-          <Input type="email" name="message" />
+          <Label for="message">message</Label>
+          <Input type="text" name="message" />
           <Label for="details">additional details</Label>
           <TextArea type="email" name="details" cols="30" rows="10" />
           <Button text="send message" />
