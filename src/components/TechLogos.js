@@ -7,11 +7,25 @@ const StyledTechLogos = styled.ul`
   grid-template-columns: auto auto auto auto;
   grid-gap: 3rem;
   list-style: none;
-  color: var(--color-primary-dark);
+  color: var(--color-white);
+`
+
+const IconBackground = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  background-color: var(--color-primary-dark);
 `
 
 const Icon = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 4rem;
+  position: relative;
 `
 
 const TechLogos = () => {
@@ -21,7 +35,9 @@ const TechLogos = () => {
         const { id, logo } = skill
         return (
           <li>
-            <Icon key={id}>{logo}</Icon>
+            <IconBackground>
+              <Icon key={id}>{logo}</Icon>
+            </IconBackground>
           </li>
         )
       })}
