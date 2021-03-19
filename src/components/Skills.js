@@ -23,7 +23,7 @@ const Content = styled.div`
 const Skills = () => {
   return (
     <SkillsWrapper>
-      <CardTitle>{data[1].title}</CardTitle>
+      <CardTitle title={data[1].title} />
       <Content>
         <TechText />
         <TechLogos />

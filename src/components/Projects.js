@@ -17,7 +17,7 @@ const ProjectsWrapper = styled.div`
 const Projects = () => {
   return (
     <ProjectsWrapper>
-      <CardTitle>{data[2].title}</CardTitle>
+      <CardTitle title={data[2].title} />
       <ScreenShot></ScreenShot>
     </ProjectsWrapper>
   )

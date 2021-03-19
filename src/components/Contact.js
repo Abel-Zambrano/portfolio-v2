@@ -1,9 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import CardTitle from "./CardTitle"
 import data from "../JS/data"
 import { SiMinutemailer } from "@react-icons/all-files/si/SiMinutemailer"
+
+import CardTitle from "./CardTitle"
+import Button from "./Button"
 
 const Div = styled.article`
   display: flex;
@@ -14,8 +16,6 @@ const Div = styled.article`
   height: 100%;
   width: 100%;
 `
-
-const Title = styled(CardTitle)``
 
 const IconBackground = styled.div`
   background-color: var(--color-primary-dark);
@@ -36,37 +36,16 @@ const Text = styled.p`
   color: var(--color-jetblack);
 `
 
-const Button = styled.button`
-  text-transform: uppercase;
-  font-size: 2rem;
-  padding: 3rem 6rem;
-  color: var(--color-primary-dark);
-  border: 2px solid var(--color-primary-dark);
-  transition: 0.2s;
-
-  &:hover {
-    color: var(--color-primary);
-    border: 2px solid var(--color-primary);
-    transform: translateY(-0.3rem);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  }
-
-  &:active {
-    transform: translateY(-1px);
-    box-shadow: 0 0.5rem 10rem rgba(0, 0, 0, 0.2);
-  }
-`
-
 const Contact = () => {
   return (
     <Div>
-      <CardTitle>{data[3].title}</CardTitle>
+      <CardTitle title={data[3].title} />
       <IconBackground>
         <Mail />
       </IconBackground>
       <Text>{data[3].text}</Text>
       <Link to="/connect/">
-        <Button>connect</Button>
+        <Button text="connect" />
       </Link>
     </Div>
   )

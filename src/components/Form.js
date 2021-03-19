@@ -1,11 +1,15 @@
 import React from "react"
 import styled from "styled-components"
 
+import Button from "./Button"
+
 const StyledForm = styled.form`
   background-color: var(--color-white);
+  width: 60rem;
+  height: 60rem;
   padding: 4rem 2rem;
   font-size: 1.2rem;
-  margin: 4rem auto;
+  box-shadow: 1rem 1rem 2rem 0.2rem rgba(0, 0, 0, 0.2);
 `
 
 const Column = styled.div`
@@ -29,7 +33,7 @@ const Input = styled.input`
 
 const TextArea = styled.textarea`
   margin-top: 0.6rem;
-  margin-bottom: 2rem;
+  margin-bottom: 8rem;
   font-family: inherit;
   font-size: 1.4rem;
   height: 20rem;
@@ -45,11 +49,6 @@ const NameDiv = styled.div`
 const Row = styled.div`
   display: flex;
   justify-content: space-between;
-`
-
-const Button = styled.button`
-  text-transform: uppercase;
-  font-size: 2rem;
 `
 
 const Form = () => {
@@ -73,7 +72,7 @@ const Form = () => {
           <Input type="email" name="message" />
           <Label for="details">additional details</Label>
           <TextArea type="email" name="details" cols="30" rows="10" />
-          <Button>send</Button>
+          <Button text="send message" />
         </Column>
       </StyledForm>
     </>

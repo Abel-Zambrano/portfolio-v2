@@ -28,7 +28,7 @@ const SpanFocus = styled.span`
 const About = () => {
   return (
     <AboutWrapper>
-      <CardTitle>{data[0].title}</CardTitle>
+      <CardTitle title={data[0].title} />
       <Avatar />
       <Text>
         {data[0].infoStart}
