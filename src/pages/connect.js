@@ -25,7 +25,7 @@ const connect = () => {
         <Div>
           <CardTitle title="contact form" />
           <Form />
-          <Success />
+          {/* <Success /> */}
         </Div>
       </Layout>
     </>
