@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import emailjs from "emailjs-com"
 
 import Button from "./Button"
 
@@ -31,6 +32,14 @@ const Input = styled.input`
   background: transparent;
 `
 
+const LabelRequired = styled(Label)`
+  &:after {
+    content: "*";
+    color: red;
+    margin-left: 0.5rem;
+  }
+`
+
 const TextArea = styled.textarea`
   margin-top: 0.6rem;
   margin-bottom: 8rem;
@@ -51,28 +60,48 @@ const Row = styled.div`
   justify-content: space-between;
 `
 
+const sendEmail = e => {
+  e.preventDefault()
+  emailjs
+    .sendForm(
+      process.env.SERVICE_ID,
+      process.env.TEMPLATE_ID,
+      e.target,
+      process.env.USER_ID
+    )
+    .then(
+      function (response) {
+        console.log("SUCCESS!", response.status, response.text)
+      },
+      function (error) {
+        console.log("FAILED...", error)
+      }
+    )
+  e.target.reset()
+}
+
 const Form = () => {
   return (
     <>
-      <StyledForm>
+      <StyledForm method="post" onSubmit={sendEmail}>
         <Column>
           <Row>
             <NameDiv>
-              <Label for="fname">first name</Label>
-              <Input type="text" name="fname" />
+              <LabelRequired for="fname">first name</LabelRequired>
+              <Input type="text" name="fname" required />
             </NameDiv>
             <NameDiv>
               <Label for="lname">last name</Label>
               <Input type="text" name="lname" />
             </NameDiv>
           </Row>
-          <Label for="email">email</Label>
-          <Input type="email" name="email" />
-          <Label for="message">message</Label>
-          <Input type="text" name="message" />
-          <Label for="details">additional details</Label>
-          <TextArea type="email" name="details" cols="30" rows="10" />
-          <Button text="send message" />
+          <LabelRequired for="email">email</LabelRequired>
+          <Input type="email" name="email" required />
+          <LabelRequired for="message">message</LabelRequired>
+          <Input type="text" name="message" required />
+          <LabelRequired for="details">additional details</LabelRequired>
+          <TextArea type="email" name="details" cols="30" rows="10" required />
+          <Button type="submit" text="send message" />
         </Column>
       </StyledForm>
     </>
