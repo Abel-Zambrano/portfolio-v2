@@ -5,7 +5,6 @@ import GlobalStyles from "../globalStyles"
 import Layout from "../components/Layout"
 import Form from "../components/Form"
 import CardTitle from "../components/CardTitle"
-import Success from "../UI/Success"
 
 const Div = styled.div`
   display: flex;
@@ -25,7 +24,6 @@ const connect = () => {
         <Div>
           <CardTitle title="contact form" />
           <Form />
-          {/* <Success /> */}
         </Div>
       </Layout>
     </>
