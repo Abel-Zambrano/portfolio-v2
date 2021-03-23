@@ -4,7 +4,6 @@ import { graphql, useStaticQuery } from "gatsby"
 
 import Image from "gatsby-image"
 import NavLinks from "./NavLinks"
-import CardTitle from "./CardTitle"
 
 const StyledHeader = styled.div`
   background-color: var(--color-jetblack);
