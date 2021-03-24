@@ -13,6 +13,7 @@ const GlobalStyles = createGlobalStyle`
     --color-white:  #ffffff;
     --color-pink:   #f565f6;
     --color-linkedin: #0072b1;
+    --color-green: #4caf50;
 }
 
 *{

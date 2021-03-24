@@ -6,13 +6,13 @@ const StyledButton = styled.button`
   font-size: 2rem;
   padding: 2rem 6rem;
   color: var(--color-primary-dark);
-  border: 2px solid var(--color-primary-dark);
+  border: 0.2rem solid var(--color-primary-dark);
   transition: 0.2s;
   background-color: transparent;
 
   &:hover {
     color: var(--color-primary);
-    border: 2px solid var(--color-primary);
+    border: 0.2rem solid var(--color-primary);
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   }
