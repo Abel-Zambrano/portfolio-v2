@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import emailjs from "emailjs-com"
 
@@ -88,7 +88,7 @@ const Form = () => {
           <Row>
             <NameDiv>
               <LabelRequired for="fname">first name</LabelRequired>
-              <Input type="text" name="fname" required />
+              <Input type="text" name="fname" />
             </NameDiv>
             <NameDiv>
               <Label for="lname">last name</Label>
@@ -96,11 +96,11 @@ const Form = () => {
             </NameDiv>
           </Row>
           <LabelRequired for="email">email</LabelRequired>
-          <Input type="email" name="email" required />
+          <Input type="email" name="email" />
           <LabelRequired for="message">message</LabelRequired>
-          <Input type="text" name="message" required />
+          <Input type="text" name="message" />
           <LabelRequired for="details">additional details</LabelRequired>
-          <TextArea type="email" name="details" cols="30" rows="10" required />
+          <TextArea type="email" name="details" cols="30" rows="10" />
           <Button type="submit" text="send message" />
         </Column>
       </StyledForm>
