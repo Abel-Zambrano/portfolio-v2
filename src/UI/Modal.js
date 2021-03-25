@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
+import Backdrop from "./Backdrop"
 import SuccessCheck from "./SuccessCheck"
 
 const StyledModal = styled.div`
@@ -47,14 +48,16 @@ const Button = styled.button`
 
 const Modal = ({ ClassName, largeText, meduimText, btnText }) => {
   return (
-    <StyledModal>
-      <SuccessCheck />
-      <TextDiv>
-        <LargeText>{largeText}</LargeText>
-        <MeduimText>{meduimText}</MeduimText>
-      </TextDiv>
-      <Button>{btnText}</Button>
-    </StyledModal>
+    <Backdrop>
+      <StyledModal>
+        <SuccessCheck />
+        <TextDiv>
+          <LargeText>{largeText}</LargeText>
+          <MeduimText>{meduimText}</MeduimText>
+        </TextDiv>
+        <Button>{btnText}</Button>
+      </StyledModal>
+    </Backdrop>
   )
 }
 

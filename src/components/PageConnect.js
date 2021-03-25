@@ -5,7 +5,7 @@ import CardTitle from "../components/CardTitle"
 import Modal from "../UI/Modal"
 
 const PageConnect = () => {
-  const [showSucces, setShowSuccess] = useState(false)
+  const [showSucces, setShowSuccess] = useState(true)
   return (
     <>
       <CardTitle title="Contact Form" />
