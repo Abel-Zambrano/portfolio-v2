@@ -3,9 +3,7 @@ import styled from "styled-components"
 import GlobalStyles from "../globalStyles"
 
 import Layout from "../components/Layout"
-import Form from "../components/Form"
-import CardTitle from "../components/CardTitle"
-// import Modal from "../UI/Modal"
+import PageConnect from "../components/PageConnect"
 
 const Div = styled.div`
   display: flex;
@@ -23,14 +21,7 @@ const connect = () => {
       <GlobalStyles />
       <Layout>
         <Div>
-          <CardTitle title="contact form" />
-          <Form />
-          {/*       
-            // <Modal
-            //   largeText="Thank You!"
-            //   meduimText="Your message was delivered. We will be in touch soon."
-            //   btnText="OK"
-            // /> */}
+          <PageConnect />
         </Div>
       </Layout>
     </>
