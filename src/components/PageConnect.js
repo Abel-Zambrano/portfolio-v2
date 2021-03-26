@@ -1,28 +1,27 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
+import { MessageContext } from "../context/MessageContext"
 
 import Form from "../components/Form"
 import CardTitle from "../components/CardTitle"
 import Modal from "../UI/Modal"
 
 const PageConnect = () => {
-  const [showSuccess, setShowSuccess] = useState(false)
+  const [message, setMessage] = useContext(MessageContext)
 
-  const showSuccessHandler = () => {
-    setShowSuccess(!showSuccess)
+  const messageHandler = () => {
+    setMessage(!message)
   }
 
   return (
     <>
       <CardTitle title="Contact Form" />
-      <Form formClicked={showSuccessHandler} />
-      {console.log(showSuccess)}
-
-      {showSuccess ? (
+      <Form />
+      {message ? (
         <Modal
           largeText="Thank You!"
           meduimText="Your message was delivered. We will be in touch soon."
           btnText="OK"
-          cancel={showSuccessHandler}
+          cancel={messageHandler}
         />
       ) : null}
     </>

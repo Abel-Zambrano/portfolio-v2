@@ -1,6 +1,7 @@
-import React, { useState } from "react"
+import React, { useContext } from "react"
 import styled from "styled-components"
 import emailjs from "emailjs-com"
+import { MessageContext } from "../context/MessageContext"
 
 import Button from "./Button"
 
@@ -30,6 +31,10 @@ const Input = styled.input`
   border: 0;
   border-bottom: 2px solid var(--color-primary);
   background: transparent;
+
+  &:required {
+    box-shadow: none;
+  }
 `
 
 const LabelRequired = styled(Label)`
@@ -48,6 +53,9 @@ const TextArea = styled.textarea`
   height: 20rem;
   border: 0;
   border-bottom: 2px solid var(--color-primary);
+  &:required {
+    box-shadow: none;
+  }
 `
 
 const NameDiv = styled.div`
@@ -60,27 +68,30 @@ const Row = styled.div`
   justify-content: space-between;
 `
 
-const sendEmail = e => {
-  e.preventDefault()
-  emailjs
-    .sendForm(
-      process.env.SERVICE_ID,
-      process.env.TEMPLATE_ID,
-      e.target,
-      process.env.USER_ID
-    )
-    .then(
-      function (response) {
-        console.log("SUCCESS!", response.status, response.text)
-      },
-      function (error) {
-        console.log("FAILED...", error)
-      }
-    )
-  e.target.reset()
-}
+const Form = () => {
+  const [message, setMessage] = useContext(MessageContext)
 
-const Form = ({ formClicked }) => {
+  const sendEmail = e => {
+    e.preventDefault()
+    emailjs
+      .sendForm(
+        process.env.SERVICE_ID,
+        process.env.TEMPLATE_ID,
+        e.target,
+        process.env.USER_ID
+      )
+      .then(
+        function (response) {
+          console.log("SUCCESS!", response.status, response.text)
+        },
+        function (error) {
+          console.log("FAILED...", error)
+        }
+      )
+    e.target.reset()
+    setMessage(true)
+  }
+
   return (
     <>
       <StyledForm method="post" onSubmit={sendEmail}>
@@ -101,7 +112,7 @@ const Form = ({ formClicked }) => {
           <Input type="text" name="message" required />
           <LabelRequired for="details">additional details</LabelRequired>
           <TextArea type="email" name="details" cols="30" rows="10" required />
-          <Button type="submit" text="send message" clicked={formClicked} />
+          <Button type="submit" text="send message" />
         </Column>
       </StyledForm>
     </>
