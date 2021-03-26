@@ -80,7 +80,7 @@ const sendEmail = e => {
   e.target.reset()
 }
 
-const Form = () => {
+const Form = ({ formClicked }) => {
   return (
     <>
       <StyledForm method="post" onSubmit={sendEmail}>
@@ -101,7 +101,7 @@ const Form = () => {
           <Input type="text" name="message" />
           <LabelRequired for="details">additional details</LabelRequired>
           <TextArea type="email" name="details" cols="30" rows="10" />
-          <Button type="submit" text="send message" />
+          <Button type="submit" text="send message" clicked={formClicked} />
         </Column>
       </StyledForm>
     </>

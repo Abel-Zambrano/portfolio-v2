@@ -46,7 +46,7 @@ const Button = styled.button`
   }
 `
 
-const Modal = ({ ClassName, largeText, meduimText, btnText }) => {
+const Modal = ({ ClassName, largeText, meduimText, btnText, cancel }) => {
   return (
     <Backdrop>
       <StyledModal>
@@ -55,7 +55,7 @@ const Modal = ({ ClassName, largeText, meduimText, btnText }) => {
           <LargeText>{largeText}</LargeText>
           <MeduimText>{meduimText}</MeduimText>
         </TextDiv>
-        <Button>{btnText}</Button>
+        <Button onClick={cancel}>{btnText}</Button>
       </StyledModal>
     </Backdrop>
   )
