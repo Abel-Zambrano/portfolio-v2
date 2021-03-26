@@ -88,7 +88,7 @@ const Form = ({ formClicked }) => {
           <Row>
             <NameDiv>
               <LabelRequired for="fname">first name</LabelRequired>
-              <Input type="text" name="fname" />
+              <Input type="text" name="fname" required />
             </NameDiv>
             <NameDiv>
               <Label for="lname">last name</Label>
@@ -96,11 +96,11 @@ const Form = ({ formClicked }) => {
             </NameDiv>
           </Row>
           <LabelRequired for="email">email</LabelRequired>
-          <Input type="email" name="email" />
+          <Input type="email" name="email" required />
           <LabelRequired for="message">message</LabelRequired>
-          <Input type="text" name="message" />
+          <Input type="text" name="message" required />
           <LabelRequired for="details">additional details</LabelRequired>
-          <TextArea type="email" name="details" cols="30" rows="10" />
+          <TextArea type="email" name="details" cols="30" rows="10" required />
           <Button type="submit" text="send message" clicked={formClicked} />
         </Column>
       </StyledForm>
