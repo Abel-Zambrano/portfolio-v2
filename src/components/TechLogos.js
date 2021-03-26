@@ -34,9 +34,9 @@ const TechLogos = () => {
       {skillsData.map(skill => {
         const { id, logo } = skill
         return (
-          <li>
+          <li key={id}>
             <IconBackground>
-              <Icon key={id}>{logo}</Icon>
+              <Icon>{logo}</Icon>
             </IconBackground>
           </li>
         )
