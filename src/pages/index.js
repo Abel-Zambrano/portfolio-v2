@@ -22,16 +22,16 @@ const IndexPage = () => (
         </BlackOverlay>
       </WelcomeBackground>
       <Content>
-        <Section>
+        <Section id="about">
           <About />
         </Section>
-        <Section>
+        <Section id="skills">
           <Skills />
         </Section>
-        <Section>
+        <Section id="projects">
           <Projects />
         </Section>
-        <Section>
+        <Section id="contact">
           <Contact />
         </Section>
       </Content>

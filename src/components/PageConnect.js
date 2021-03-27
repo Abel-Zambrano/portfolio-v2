@@ -5,7 +5,7 @@ import Form from "./Form"
 import CardTitle from "./CardTitle"
 import Modal from "../UI/Modal"
 
-const PageContact = () => {
+const PageConnect = () => {
   const [message, setMessage] = useContext(MessageContext)
 
   const messageHandler = () => {
@@ -28,4 +28,4 @@ const PageContact = () => {
   )
 }
 
-export default PageContact
+export default PageConnect
