@@ -4,7 +4,7 @@ import GlobalStyles from "../globalStyles"
 import { MessageProvider } from "../context/MessageContext"
 
 import Layout from "../components/Layout"
-import PageConnect from "../components/PageConnect"
+import PageContact from "../components/PageContact"
 
 const Div = styled.div`
   display: flex;
@@ -15,17 +15,17 @@ const Div = styled.div`
   height: 100rem;
 `
 
-const connect = () => {
+const contact = () => {
   return (
     <MessageProvider>
       <GlobalStyles />
       <Layout>
         <Div>
-          <PageConnect />
+          <PageContact />
         </Div>
       </Layout>
     </MessageProvider>
   )
 }
 
-export default connect
+export default contact
