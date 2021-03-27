@@ -1,8 +1,8 @@
-import React, { useState, useContext } from "react"
+import React, { useContext } from "react"
 import { MessageContext } from "../context/MessageContext"
 
-import Form from "../components/Form"
-import CardTitle from "../components/CardTitle"
+import Form from "./Form"
+import CardTitle from "./CardTitle"
 import Modal from "../UI/Modal"
 
 const PageContact = () => {
