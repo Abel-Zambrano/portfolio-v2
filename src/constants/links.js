@@ -7,22 +7,22 @@ const links = [
   {
     id: 2,
     text: "about",
-    url: "#about",
+    url: "/#about",
   },
   {
     id: 3,
     text: "skills",
-    url: "#skills",
+    url: "/#skills",
   },
   {
     id: 4,
     text: "projects",
-    url: "#projects",
+    url: "/#projects",
   },
   {
     id: 5,
     text: "contact",
-    url: "#contact",
+    url: "/#contact",
   },
 ]
 
