@@ -1,11 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import data from "../JS/data"
+import data from "../../JS/data"
 import { SiMinutemailer } from "@react-icons/all-files/si/SiMinutemailer"
 
-import CardTitle from "./CardTitle"
-import Button from "./Button"
+import CardTitle from "../CardTitle"
+import Button from "../Button"
 
 const Div = styled.article`
   display: flex;

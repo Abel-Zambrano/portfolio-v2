@@ -1,16 +1,16 @@
 import React from "react"
 import GlobalStyles from "../globalStyles"
 
-import Layout from "../components/Layout"
+import Layout from "../components/layout/Layout"
 import WelcomeBackground from "../components/WelcomeBackground"
 import BlackOverlay from "../components/BlackOverlay"
 import WelcomeText from "../components/WelcomeText"
-import Section from "../components/Section"
-import Content from "../components/Content"
-import About from "../components/About"
-import Skills from "../components/Skills"
-import Projects from "../components/Projects"
-import Contact from "../components/Contact"
+import Section from "../components/sections/Section"
+import Content from "../components/sections/Content"
+import About from "../components/sections/About"
+import Skills from "../components/sections/Skills"
+import Projects from "../components/sections/Projects"
+import Contact from "../components/sections/Contact"
 
 const IndexPage = () => (
   <>

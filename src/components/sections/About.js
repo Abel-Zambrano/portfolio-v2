@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import CardTitle from "./CardTitle"
-import Avatar from "./Avatar"
-import data from "../JS/data"
+import CardTitle from "../CardTitle"
+import Avatar from "../Avatar"
+import data from "../../JS/data"
 
 const AboutWrapper = styled.article`
   display: flex;

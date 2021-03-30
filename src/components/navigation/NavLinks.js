@@ -1,12 +1,16 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import links from "../constants/links"
+import links from "../../constants/links"
 
 const StyledNav = styled.ul`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
+  /* @media screen and (max-width: 900px) {
+    flex-direction: column;
+  } */
 
   .list-item {
     list-style: none;

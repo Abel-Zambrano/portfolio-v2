@@ -3,7 +3,7 @@ import styled from "styled-components"
 import GlobalStyles from "../globalStyles"
 import { MessageProvider } from "../context/MessageContext"
 
-import Layout from "../components/Layout"
+import Layout from "../components/layout/Layout"
 import PageConnect from "../components/PageConnect"
 
 const Div = styled.div`

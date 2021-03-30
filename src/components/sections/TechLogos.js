@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import skillsData from "../JS/skills"
+import skillsData from "../../JS/skills"
 
 const StyledTechLogos = styled.ul`
   display: grid;

@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import CardTitle from "./CardTitle"
+import CardTitle from "../CardTitle"
 import TechText from "./TechText"
 import TechLogos from "./TechLogos"
-import data from "../JS/data"
+import data from "../../JS/data"
 
 const SkillsWrapper = styled.article`
   display: flex;

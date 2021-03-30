@@ -3,29 +3,28 @@ import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 
 import Image from "gatsby-image"
-import NavLinks from "./NavLinks"
+import NavLinks from "../navigation/NavLinks"
 
 const StyledHeader = styled.div`
   background-color: var(--color-jetblack);
-`
 
-const HeaderContainer = styled.div`
-  display: flex;
-  justify-content: space-around;
-  margin: 0 2.2rem;
-`
+  .header-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 2.2rem;
+  }
 
-const Title = styled.div`
-  display: flex;
-  align-items: center;
-  font-size: 1.4rem;
-  color: var(--color-white);
-  text-transform: uppercase;
-`
+  .title {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    color: var(--color-white);
+    text-transform: uppercase;
+  }
 
-const Name = styled.h1`
-  color: var(--color-white);
-  font-weight: 200;
+  .name {
+    font-weight: 200;
+  }
 `
 
 const Header = props => {
@@ -43,16 +42,16 @@ const Header = props => {
 
   return (
     <StyledHeader>
-      <HeaderContainer>
-        <Title>
+      <div className="header-container">
+        <div className="title">
           <Image
             style={{ width: "8rem" }}
             fluid={data.file.childImageSharp.fluid}
           />
-          <Name>abel zambrano</Name>
-        </Title>
+          <h1 className="name">abel zambrano</h1>
+        </div>
         <NavLinks />
-      </HeaderContainer>
+      </div>
     </StyledHeader>
   )
 }
