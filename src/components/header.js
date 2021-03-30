@@ -11,7 +11,7 @@ const StyledHeader = styled.div`
 
 const HeaderContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 0 2.2rem;
 `
 
