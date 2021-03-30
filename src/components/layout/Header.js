@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from "gatsby"
 
 import Image from "gatsby-image"
 import NavLinks from "../navigation/NavLinks"
+import MobileNavLinks from "../navigation/MobileNavLinks"
 
 const StyledHeader = styled.div`
   background-color: var(--color-jetblack);
@@ -52,6 +53,7 @@ const Header = props => {
         </div>
         <NavLinks />
       </div>
+      <MobileNavLinks />
     </StyledHeader>
   )
 }
