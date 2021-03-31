@@ -1,10 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 
 import Image from "gatsby-image"
 import NavLinks from "../navigation/NavLinks"
 import MobileNavLinks from "../navigation/MobileNavLinks"
+import Hamburger from "../navigation/Hamburger"
 
 const StyledHeader = styled.div`
   background-color: var(--color-jetblack);
@@ -13,6 +14,7 @@ const StyledHeader = styled.div`
     display: flex;
     justify-content: space-around;
     margin: 0 2.2rem;
+    align-items: center;
   }
 
   .title {
@@ -29,6 +31,12 @@ const StyledHeader = styled.div`
 `
 
 const Header = props => {
+  const [showNav, setShowNav] = useState(false)
+
+  const showNavHandler = () => {
+    setShowNav(!showNav)
+  }
+
   const data = useStaticQuery(graphql`
     {
       file(relativePath: { eq: "AZ_logo.png" }) {
@@ -52,8 +60,13 @@ const Header = props => {
           <h1 className="name">abel zambrano</h1>
         </div>
         <NavLinks />
+        <Hamburger
+          open={showNav}
+          setOpen={setShowNav}
+          onClick={showNavHandler}
+        />
       </div>
-      <MobileNavLinks />
+      {showNav ? <MobileNavLinks /> : null}
     </StyledHeader>
   )
 }

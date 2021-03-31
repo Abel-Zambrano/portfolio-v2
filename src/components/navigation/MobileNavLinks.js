@@ -5,13 +5,14 @@ import links from "../../constants/links"
 
 const StyledMobileNavLinks = styled.ul`
   display: none;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 24rem;
 
   @media screen and (max-width: 900px) {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 24rem;
+    transition: transform 0.3s ease-in-out;
   }
 
   .list-item {
@@ -35,7 +36,7 @@ const activeStyles = {
   borderBottom: "0.2rem solid var(--color-primary-light)",
 }
 
-const MobileNavLinks = () => {
+const MobileNavLinks = ({ open }) => {
   return (
     <>
       <StyledMobileNavLinks>
