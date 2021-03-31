@@ -4,11 +4,13 @@ import { Link } from "gatsby"
 import links from "../../constants/links"
 
 const StyledMobileNavLinks = styled.ul`
-  display: flex;
+  display: none;
   justify-content: space-evenly;
   align-items: center;
+  height: 24rem;
 
   @media screen and (max-width: 900px) {
+    display: flex;
     flex-direction: column;
   }
 
@@ -29,6 +31,10 @@ const StyledMobileNavLinks = styled.ul`
   }
 `
 
+const activeStyles = {
+  borderBottom: "0.2rem solid var(--color-primary-light)",
+}
+
 const MobileNavLinks = () => {
   return (
     <>
@@ -36,7 +42,7 @@ const MobileNavLinks = () => {
         {links.map(link => {
           return (
             <li className="list-item" key={link.id}>
-              <Link className="link" to={link.url}>
+              <Link className="link" to={link.url} activeStyle={activeStyles}>
                 {link.text}
               </Link>
             </li>

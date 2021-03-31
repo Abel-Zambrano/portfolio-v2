@@ -8,9 +8,9 @@ const StyledNav = styled.ul`
   justify-content: space-evenly;
   align-items: center;
 
-  /* @media screen and (max-width: 900px) {
-    flex-direction: column;
-  } */
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 
   .list-item {
     list-style: none;
@@ -29,6 +29,10 @@ const StyledNav = styled.ul`
   }
 `
 
+const activeStyles = {
+  borderBottom: "0.2rem solid var(--color-primary-light)",
+}
+
 const NavLink = () => {
   return (
     <>
@@ -36,7 +40,7 @@ const NavLink = () => {
         {links.map(link => {
           return (
             <li className="list-item" key={link.id}>
-              <Link className="link" to={link.url}>
+              <Link className="link" to={link.url} activeStyle={activeStyles}>
                 {link.text}
               </Link>
             </li>
