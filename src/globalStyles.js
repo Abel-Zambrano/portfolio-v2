@@ -1,5 +1,7 @@
 import { createGlobalStyle } from "styled-components"
 
+// media queries sizes: 900px, 490px
+
 const GlobalStyles = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap');
 

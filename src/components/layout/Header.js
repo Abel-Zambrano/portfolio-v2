@@ -23,6 +23,10 @@ const StyledHeader = styled.div`
     font-size: 1.4rem;
     color: var(--color-white);
     text-transform: uppercase;
+
+    @media screen and (max-width: 490px) {
+      font-size: 0.8rem;
+    }
   }
 
   .name {
@@ -54,19 +58,16 @@ const Header = props => {
       <div className="header-container">
         <div className="title">
           <Image
+            className="logo-image"
             style={{ width: "8rem" }}
             fluid={data.file.childImageSharp.fluid}
           />
           <h1 className="name">abel zambrano</h1>
         </div>
         <NavLinks />
-        <Hamburger
-          open={showNav}
-          setOpen={setShowNav}
-          onClick={showNavHandler}
-        />
+        <Hamburger open={showNav} onClick={showNavHandler} />
       </div>
-      {showNav ? <MobileNavLinks /> : null}
+      <MobileNavLinks open={showNav} />
     </StyledHeader>
   )
 }

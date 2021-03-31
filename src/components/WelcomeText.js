@@ -18,10 +18,6 @@ const smallTextAnimation = keyframes`
     transform: translateY(10rem);
   }
 
-  /* 50% {
-    opacity: 0;
-  } */
-
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -39,6 +35,10 @@ const Text1 = styled.h1`
   line-height: 8rem;
   animation: ${textAnimation} 2s ease-in-out;
   animation-fill-mode: forwards;
+
+  @media screen and (max-width: 490px) {
+    font-size: 3rem;
+  }
 `
 
 const Text2 = styled.h1`
@@ -49,6 +49,10 @@ const Text2 = styled.h1`
   line-height: 8rem;
   animation: ${textAnimation} 2s ease-in-out 1.5s;
   animation-fill-mode: forwards;
+
+  @media screen and (max-width: 490px) {
+    font-size: 3rem;
+  }
 `
 
 const SmallText = styled.p`
@@ -59,6 +63,10 @@ const SmallText = styled.p`
   line-height: 8rem;
   animation: ${smallTextAnimation} 1s ease-out 3s;
   animation-fill-mode: forwards;
+
+  @media screen and (max-width: 490px) {
+    font-size: 1.5rem;
+  }
 `
 
 const WelcomeText = () => {

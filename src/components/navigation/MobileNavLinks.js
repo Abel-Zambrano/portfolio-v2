@@ -13,6 +13,13 @@ const StyledMobileNavLinks = styled.ul`
     align-items: center;
     height: 24rem;
     transition: transform 0.3s ease-in-out;
+    position: absolute;
+    z-index: 10;
+    background-color: var(--color-jetblack);
+    opacity: 0.8;
+    top: 8.1%;
+    width: 100%;
+    transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
   }
 
   .list-item {
@@ -39,7 +46,7 @@ const activeStyles = {
 const MobileNavLinks = ({ open }) => {
   return (
     <>
-      <StyledMobileNavLinks>
+      <StyledMobileNavLinks open={open}>
         {links.map(link => {
           return (
             <li className="list-item" key={link.id}>
