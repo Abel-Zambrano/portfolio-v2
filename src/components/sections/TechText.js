@@ -22,41 +22,52 @@ const TechTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-`
 
-const Text = styled.p`
-  max-width: 58rem;
-  line-height: 2rem;
-  font-size: 1.52rem;
-  font-weight: 700;
-  color: var(--color-jetblack);
-  text-align: start;
-`
-const Span = styled.span`
-  font-family: "Roboto Mono", monospace;
-  color: var(--color-primary-dark);
-  font-size: 1.7rem;
-  text-transform: uppercase;
-  text-align: right;
-`
+  @media screen and (max-width: 1000px) {
+    justify-content: center;
+    align-items: center;
+  }
 
-const SpanContainer = styled.div``
+  @media screen and (max-width: 490px) {
+    display: none;
+  }
+
+  .text {
+    max-width: 58rem;
+    line-height: 2rem;
+    font-size: 1.52rem;
+    font-weight: 700;
+    color: var(--color-jetblack);
+    text-align: start;
+
+    @media screen and (max-width: 1000px) {
+      text-align: center;
+      margin-top: 1.6rem;
+    }
+  }
+
+  .styled-text {
+    font-family: "Roboto Mono", monospace;
+    color: var(--color-primary-dark);
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    text-align: right;
+  }
+`
 
 const TechText = () => {
   return (
     <TechTextWrapper>
-      <Text>
+      <p className="text">
         Front-End Skills
-        <SpanContainer>
-          <Span>{newTechName}</Span>
-        </SpanContainer>
-      </Text>
-      <Text>
+        <br />
+        <span className="styled-text">{newTechName}</span>
+      </p>
+      <p className="text">
         Back-End Skills
-        <SpanContainer>
-          <Span>{newBTechName}</Span>
-        </SpanContainer>
-      </Text>
+        <br />
+        <span className="styled-text">{newBTechName}</span>
+      </p>
     </TechTextWrapper>
   )
 }

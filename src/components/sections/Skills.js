@@ -13,21 +13,28 @@ const SkillsWrapper = styled.article`
   text-align: center;
   height: 100%;
   width: 100%;
-`
-const Content = styled.div`
-  width: 100rem;
-  display: flex;
-  justify-content: space-evenly;
+
+  .content {
+    width: 100rem;
+    display: flex;
+    justify-content: space-evenly;
+
+    @media screen and (max-width: 1000px) {
+      flex-direction: column;
+      justify-content: center;
+      width: 50rem;
+    }
+  }
 `
 
 const Skills = () => {
   return (
     <SkillsWrapper>
       <CardTitle title={data[1].title} />
-      <Content>
+      <div className="content">
         <TechText />
         <TechLogos />
-      </Content>
+      </div>
     </SkillsWrapper>
   )
 }

@@ -8,24 +8,42 @@ const StyledTechLogos = styled.ul`
   grid-gap: 3rem;
   list-style: none;
   color: var(--color-white);
-`
+  margin: auto;
 
-const IconBackground = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 7rem;
-  height: 7rem;
-  border-radius: 50%;
-  background-color: var(--color-primary-dark);
-`
+  @media screen and (max-width: 1000px) {
+    margin: 2rem auto;
+  }
 
-const Icon = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 4rem;
-  position: relative;
+  @media screen and (max-width: 490px) {
+    grid-template-columns: auto auto auto;
+    grid-gap: 2rem;
+  }
+
+  .list-item {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    width: 10rem;
+  }
+
+  .icon-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    background-color: var(--color-primary-dark);
+  }
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    position: relative;
+  }
 `
 
 const TechLogos = () => {
@@ -34,10 +52,10 @@ const TechLogos = () => {
       {skillsData.map(skill => {
         const { id, logo } = skill
         return (
-          <li key={id}>
-            <IconBackground>
-              <Icon>{logo}</Icon>
-            </IconBackground>
+          <li className="list-item" key={id}>
+            <div className="icon-background">
+              <div className="icon">{logo}</div>
+            </div>
           </li>
         )
       })}
