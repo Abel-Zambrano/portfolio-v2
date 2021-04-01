@@ -18,6 +18,7 @@ const StyledMobileNavLinks = styled.ul`
     background-color: var(--color-jetblack);
     opacity: 0.8;
     top: 8.1%;
+    position: fixed;
     width: 100%;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
   }
