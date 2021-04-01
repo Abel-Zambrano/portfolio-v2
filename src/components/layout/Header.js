@@ -1,6 +1,7 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
+import { debounce } from "../../utilities/helpers"
 
 import Image from "gatsby-image"
 import NavLinks from "../navigation/NavLinks"
@@ -9,6 +10,10 @@ import Hamburger from "../navigation/Hamburger"
 
 const StyledHeader = styled.div`
   background-color: var(--color-jetblack);
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+  transition: top 0.3s;
 
   .header-container {
     display: flex;
@@ -35,11 +40,37 @@ const StyledHeader = styled.div`
 `
 
 const Header = props => {
-  const [showNav, setShowNav] = useState(false)
+  const [showNav, setShowNav] = useState(false) // show mobile navbar
+  const [prevScroll, setPrevScroll] = useState(0)
+  const [visible, setVisible] = useState(true) // show desktop navbar
 
+  // toggle for mobile navbar
   const showNavHandler = () => {
     setShowNav(!showNav)
   }
+
+  const scrollHandler = debounce(() => {
+    // find current scroll position
+    const currentScroll = window.pageYOffset
+
+    // set vivible state based on scroll position
+    setVisible(
+      (prevScroll > currentScroll && prevScroll - currentScroll > 70) ||
+        currentScroll < 20
+    )
+
+    // set state based to new scroll postion
+    setPrevScroll(currentScroll)
+    console.log(`Prev: ${prevScroll}`)
+    console.log(`Cur: ${currentScroll}`)
+  }, 100)
+
+  useEffect(() => {
+    window.addEventListener("scroll", scrollHandler)
+
+    // cleanup
+    return () => window.removeEventListener("scroll", scrollHandler)
+  }, [prevScroll, visible, scrollHandler])
 
   const data = useStaticQuery(graphql`
     {
@@ -54,7 +85,7 @@ const Header = props => {
   `)
 
   return (
-    <StyledHeader>
+    <StyledHeader style={{ top: visible ? "0" : "-100px" }}>
       <div className="header-container">
         <div className="title">
           <Image
