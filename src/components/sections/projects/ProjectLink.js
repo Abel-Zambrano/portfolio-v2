@@ -7,7 +7,6 @@ import { MdWeb } from "@react-icons/all-files/md/MdWeb"
 const StyledProjectLink = styled.div`
   display: flex;
   opacity: 0;
-  /* display: flex; */
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -28,6 +27,8 @@ const StyledProjectLink = styled.div`
     width: 100%;
     height: 12rem;
     background-color: var(--shadow-primary);
+    transition: 0.3s;
+    /* transform: translateY(100); */
   }
 
   .title {
