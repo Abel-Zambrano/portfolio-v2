@@ -3,14 +3,21 @@ import Image from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
-// const Wrapper = styled.div`
-//   width: 50rem;
-//   object-fit: fill;
-// `
+const StyledScreenShot = styled.div`
+  width: 100rem;
+  object-fit: fill;
 
-const ProjectImage = styled(Image)`
-  width: 10rem;
-  height: 10rem;
+  @media screen and (max-width: 1000px) {
+    width: 70rem;
+  }
+
+  @media screen and (max-width: 760px) {
+    width: 50rem;
+  }
+
+  @media screen and (max-width: 490px) {
+    width: 36rem;
+  }
 `
 
 const ScreenShot = ({ children }) => {
@@ -18,17 +25,21 @@ const ScreenShot = ({ children }) => {
     {
       file(relativePath: { eq: "anJanitorial.png" }) {
         childImageSharp {
-          fixed(height: 420, width: 800) {
-            ...GatsbyImageSharpFixed
+          fluid {
+            ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `)
 
-  const imageData = data.file.childImageSharp.fixed
+  const imageData = data.file.childImageSharp.fluid
 
-  return <ProjectImage fixed={imageData}>{children}</ProjectImage>
+  return (
+    <StyledScreenShot>
+      <Image fluid={imageData}>{children}</Image>
+    </StyledScreenShot>
+  )
 }
 
 export default ScreenShot
