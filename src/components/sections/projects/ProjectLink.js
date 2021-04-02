@@ -6,6 +6,8 @@ import { MdWeb } from "@react-icons/all-files/md/MdWeb"
 
 const StyledProjectLink = styled.div`
   display: flex;
+  opacity: 0;
+  /* display: flex; */
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -16,6 +18,7 @@ const StyledProjectLink = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
 
   &:hover {
+    opacity: 1;
   }
 
   .title-box {
@@ -23,7 +26,7 @@ const StyledProjectLink = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 8rem;
+    height: 12rem;
     background-color: var(--shadow-primary);
   }
 
@@ -32,13 +35,29 @@ const StyledProjectLink = styled.div`
     color: var(--color-white);
   }
 
+  .link {
+    &:link,
+    &:visited {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
   .icon-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 8rem;
-    margin-bottom: 3rem;
+    height: 12rem;
     background-color: var(--shadow-primary);
   }
 
@@ -69,13 +88,26 @@ const ProjectLink = () => {
       </div>
       <div className="icon-container">
         <div className="icon-text-box">
-          <MdWeb className="icon" />
-          <p className="text">WEBSITE</p>
+          <a
+            className="link"
+            href="https://www.anjanitorialservice.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <MdWeb className="icon" />
+            <p className="text">WEBSITE</p>
+          </a>
         </div>
         <div className="icon-text-box">
-          {" "}
-          <SiGit className="icon" />
-          <p className="text">CODE</p>
+          <a
+            className="link"
+            href="https://github.com/Abel-Zambrano/an-janitorial-service"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SiGit className="icon" />
+            <p className="text">CODE</p>
+          </a>
         </div>
       </div>
     </StyledProjectLink>
