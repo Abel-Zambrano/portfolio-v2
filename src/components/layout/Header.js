@@ -9,11 +9,17 @@ import MobileNavLinks from "../navigation/MobileNavLinks"
 import Hamburger from "../navigation/Hamburger"
 
 const StyledHeader = styled.div`
-  background-color: var(--color-jetblack);
+  background-color: transparent;
   position: fixed;
   width: 100%;
+  height: 8rem;
   z-index: 20;
-  transition: top 0.3s;
+  /* transition: top 0.6s; */
+  transition: 0.6s;
+
+  &.active {
+    background-color: var(--color-jetblack);
+  }
 
   .header-container {
     display: flex;
@@ -43,6 +49,7 @@ const Header = props => {
   const [showNav, setShowNav] = useState(false) // show mobile navbar
   const [prevScroll, setPrevScroll] = useState(0)
   const [visible, setVisible] = useState(true) // show desktop navbar
+  const [navColor, setNavColor] = useState(false) // change navbar from transparent to black
 
   // toggle for mobile navbar
   const showNavHandler = () => {
@@ -61,8 +68,6 @@ const Header = props => {
 
     // set state based to new scroll postion
     setPrevScroll(currentScroll)
-    console.log(`Prev: ${prevScroll}`)
-    console.log(`Cur: ${currentScroll}`)
   }, 100)
 
   useEffect(() => {
@@ -71,6 +76,17 @@ const Header = props => {
     // cleanup
     return () => window.removeEventListener("scroll", scrollHandler)
   }, [prevScroll, visible, scrollHandler])
+
+  const navColorHandler = () => {
+    if (window.scrollY > 80) {
+      setNavColor(true)
+    } else {
+      setNavColor(false)
+    }
+    console.log(window.scrollY)
+  }
+
+  window.addEventListener("scroll", navColorHandler)
 
   const data = useStaticQuery(graphql`
     {
@@ -85,7 +101,10 @@ const Header = props => {
   `)
 
   return (
-    <StyledHeader style={{ top: visible ? "0" : "-100px" }}>
+    <StyledHeader
+      className={navColor ? "active" : null}
+      style={{ top: visible ? "0" : "-100px" }}
+    >
       <div className="header-container">
         <div className="title">
           <Image
