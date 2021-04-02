@@ -1,22 +1,16 @@
 import React from "react"
-import Image from "gatsby-image"
+import BackgroundImage from "gatsby-background-image"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
-const StyledScreenShot = styled.div`
-  width: 100rem;
-  object-fit: fill;
-
-  @media screen and (max-width: 1000px) {
-    width: 70rem;
-  }
+const StyledBackgroundImage = styled(BackgroundImage)`
+  width: 80rem;
+  height: 40rem;
+  background-repeat: no-repeat;
 
   @media screen and (max-width: 760px) {
-    width: 50rem;
-  }
-
-  @media screen and (max-width: 490px) {
     width: 36rem;
+    height: 18rem;
   }
 `
 
@@ -25,7 +19,7 @@ const ScreenShot = ({ children }) => {
     {
       file(relativePath: { eq: "anJanitorial.png" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 95) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -36,9 +30,7 @@ const ScreenShot = ({ children }) => {
   const imageData = data.file.childImageSharp.fluid
 
   return (
-    <StyledScreenShot>
-      <Image fluid={imageData}>{children}</Image>
-    </StyledScreenShot>
+    <StyledBackgroundImage fluid={imageData}>{children}</StyledBackgroundImage>
   )
 }
 

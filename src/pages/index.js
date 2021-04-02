@@ -9,7 +9,7 @@ import Section from "../components/sections/Section"
 import Content from "../components/sections/Content"
 import About from "../components/sections/About"
 import Skills from "../components/sections/Skills"
-import Projects from "../components/sections/Projects"
+import Projects from "../components/sections/projects/Projects"
 import Contact from "../components/sections/Contact"
 
 const IndexPage = () => (

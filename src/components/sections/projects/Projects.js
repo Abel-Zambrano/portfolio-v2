@@ -1,8 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import CardTitle from "../CardTitle"
+import CardTitle from "../../CardTitle"
 import ScreenShot from "./ScreenShot"
-import data from "../../JS/data"
+import data from "../../../JS/data"
+
+import ProjectLink from "./ProjectLink"
 
 const ProjectsWrapper = styled.div`
   display: flex;
@@ -18,7 +20,9 @@ const Projects = () => {
   return (
     <ProjectsWrapper>
       <CardTitle title={data[2].title} />
-      <ScreenShot></ScreenShot>
+      <ScreenShot>
+        <ProjectLink />
+      </ScreenShot>
     </ProjectsWrapper>
   )
 }
