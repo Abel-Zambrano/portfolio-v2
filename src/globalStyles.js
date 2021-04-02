@@ -16,6 +16,9 @@ const GlobalStyles = createGlobalStyle`
     --color-pink:   #f565f6;
     --color-linkedin: #0072b1;
     --color-green: #4caf50;
+
+    --shadow-primary: rgba(0, 153, 153, 0.6);
+
 }
 
 *{

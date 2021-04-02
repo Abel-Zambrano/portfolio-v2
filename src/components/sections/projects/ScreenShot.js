@@ -7,6 +7,11 @@ const StyledBackgroundImage = styled(BackgroundImage)`
   width: 80rem;
   height: 40rem;
   background-repeat: no-repeat;
+  transition: 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 
   @media screen and (max-width: 760px) {
     width: 36rem;
