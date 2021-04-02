@@ -117,7 +117,7 @@ const Header = props => {
         <NavLinks />
         <Hamburger open={showNav} onClick={showNavHandler} />
       </div>
-      <MobileNavLinks open={showNav} />
+      <MobileNavLinks open={showNav && visible} />
     </StyledHeader>
   )
 }
