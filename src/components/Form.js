@@ -12,6 +12,10 @@ const StyledForm = styled.form`
   padding: 4rem 2rem;
   font-size: 1.2rem;
   box-shadow: 1rem 1rem 2rem 0.2rem rgba(0, 0, 0, 0.2);
+
+  @media screen and (max-width: 490px) {
+    width: 96vw;
+  }
 `
 
 const Column = styled.div`
@@ -61,11 +65,20 @@ const TextArea = styled.textarea`
 const NameDiv = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: 490px) {
+    justify-content: space-between;
+    width: 48%;
+  }
 `
 
 const Row = styled.div`
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 490px) {
+    justify-content: space-between;
+  }
 `
 
 const Form = () => {
