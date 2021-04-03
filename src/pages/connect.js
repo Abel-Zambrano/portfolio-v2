@@ -6,7 +6,7 @@ import { MessageProvider } from "../context/MessageContext"
 import Layout from "../components/layout/Layout"
 import PageConnect from "../components/PageConnect"
 
-const Div = styled.div`
+const StyledConnect = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -19,10 +19,10 @@ const Connect = () => {
   return (
     <MessageProvider>
       <GlobalStyles />
-      <Layout>
-        <Div>
+      <Layout id="connect-page">
+        <StyledConnect>
           <PageConnect />
-        </Div>
+        </StyledConnect>
       </Layout>
     </MessageProvider>
   )

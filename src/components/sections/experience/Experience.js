@@ -4,9 +4,9 @@ import CardTitle from "../../CardTitle"
 import ScreenShot from "./ScreenShot"
 import data from "../../../JS/data"
 
-import ProjectLink from "./ProjectLink"
+import ExperienceLink from "./ExperienceLink"
 
-const ProjectsWrapper = styled.div`
+const StyledExperience = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -16,15 +16,15 @@ const ProjectsWrapper = styled.div`
   width: 100%;
 `
 
-const Projects = () => {
+const Experience = () => {
   return (
-    <ProjectsWrapper>
+    <StyledExperience>
       <CardTitle title={data[2].title} />
       <ScreenShot>
-        <ProjectLink />
+        <ExperienceLink />
       </ScreenShot>
-    </ProjectsWrapper>
+    </StyledExperience>
   )
 }
 
-export default Projects
+export default Experience

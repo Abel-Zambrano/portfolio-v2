@@ -39,11 +39,11 @@ const Text = styled.p`
 const Contact = () => {
   return (
     <Div>
-      <CardTitle title={data[3].title} />
+      <CardTitle title={data[4].title} />
       <IconBackground>
         <Mail />
       </IconBackground>
-      <Text>{data[3].text}</Text>
+      <Text>{data[4].text}</Text>
       <Link to="/connect/">
         <Button text="connect" />
       </Link>

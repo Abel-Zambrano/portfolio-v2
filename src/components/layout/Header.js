@@ -14,10 +14,13 @@ const StyledHeader = styled.div`
   width: 100%;
   height: 8rem;
   z-index: 20;
-  /* transition: top 0.6s; */
   transition: 0.6s;
 
   &.active {
+    background-color: var(--color-jetblack);
+  }
+
+  &#connect-page {
     background-color: var(--color-jetblack);
   }
 
@@ -45,7 +48,7 @@ const StyledHeader = styled.div`
   }
 `
 
-const Header = props => {
+const Header = ({ id }) => {
   const [showNav, setShowNav] = useState(false) // show mobile navbar
   const [prevScroll, setPrevScroll] = useState(0)
   const [visible, setVisible] = useState(true) // show desktop navbar
@@ -102,6 +105,7 @@ const Header = props => {
 
   return (
     <StyledHeader
+      id={id}
       className={navColor ? "active" : null}
       style={{ top: visible ? "0" : "-100px" }}
     >

@@ -11,6 +11,9 @@ const data = [
     title: "skills",
   },
   {
+    title: "experience",
+  },
+  {
     title: "projects",
   },
   {

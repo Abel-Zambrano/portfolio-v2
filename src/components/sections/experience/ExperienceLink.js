@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { SiGit } from "@react-icons/all-files/si/SiGit"
 import { MdWeb } from "@react-icons/all-files/md/MdWeb"
 
-const StyledProjectLink = styled.div`
+const StyledExperienceLink = styled.div`
   display: flex;
   opacity: 0;
   flex-direction: column;
@@ -81,9 +81,9 @@ const StyledProjectLink = styled.div`
   }
 `
 
-const ProjectLink = () => {
+const ExperienceLink = () => {
   return (
-    <StyledProjectLink>
+    <StyledExperienceLink>
       <div className="title-box">
         <h2 className="title">AN JANITORIAL</h2>
       </div>
@@ -111,8 +111,8 @@ const ProjectLink = () => {
           </a>
         </div>
       </div>
-    </StyledProjectLink>
+    </StyledExperienceLink>
   )
 }
 
-export default ProjectLink
+export default ExperienceLink
