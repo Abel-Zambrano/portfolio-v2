@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import CardTitle from "../../CardTitle"
-import ScreenShot from "./ScreenShot"
 import data from "../../../JS/data"
 
+import CardTitle from "../../CardTitle"
+import ScreenShot from "./ScreenShot"
 import ExperienceLink from "./ExperienceLink"
 
 const StyledExperience = styled.div`

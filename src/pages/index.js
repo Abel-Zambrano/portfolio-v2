@@ -10,6 +10,7 @@ import Content from "../components/sections/Content"
 import About from "../components/sections/About"
 import Skills from "../components/sections/Skills"
 import Experience from "../components/sections/experience/Experience"
+import Projects from "../components/sections/projects/Projects"
 import Contact from "../components/sections/Contact"
 
 const IndexPage = () => (
@@ -30,6 +31,9 @@ const IndexPage = () => (
         </Section>
         <Section id="experience">
           <Experience />
+        </Section>
+        <Section id="projects">
+          <Projects />
         </Section>
         <Section id="contact">
           <Contact />
