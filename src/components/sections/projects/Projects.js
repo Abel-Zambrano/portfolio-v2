@@ -18,7 +18,7 @@ const Projects = () => {
   return (
     <StyledProjects>
       <CardTitle title={data[3].title} />
-      <h1>HELLO</h1>
+      <h1>Coming Soon...</h1>
     </StyledProjects>
   )
 }
