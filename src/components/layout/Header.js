@@ -31,12 +31,23 @@ const StyledHeader = styled.div`
     align-items: center;
   }
 
+  .home-link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+    }
+  }
+
   .title {
     display: flex;
     align-items: center;
     font-size: 1.4rem;
     color: var(--color-white);
     text-transform: uppercase;
+
+    @media screen and (max-width: 1035px) {
+      font-size: 1rem;
+    }
 
     @media screen and (max-width: 490px) {
       font-size: 0.8rem;
@@ -110,14 +121,16 @@ const Header = ({ id }) => {
       style={{ top: visible ? "0" : "-100px" }}
     >
       <div className="header-container">
-        <div className="title">
-          <Image
-            className="logo-image"
-            style={{ width: "8rem" }}
-            fluid={data.file.childImageSharp.fluid}
-          />
-          <h1 className="name">abel zambrano</h1>
-        </div>
+        <a className="home-link" href="/">
+          <div className="title">
+            <Image
+              className="logo-image"
+              style={{ width: "8rem" }}
+              fluid={data.file.childImageSharp.fluid}
+            />
+            <h1 className="name">abel zambrano</h1>
+          </div>
+        </a>
         <NavLinks />
         <Hamburger open={showNav} onClick={showNavHandler} />
       </div>

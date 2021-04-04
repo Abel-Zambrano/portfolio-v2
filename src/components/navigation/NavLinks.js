@@ -23,15 +23,15 @@ const StyledNav = styled.ul`
     font-size: 1.8rem;
     text-transform: uppercase;
 
+    @media screen and (max-width: 1035px) {
+      font-size: 1.4rem;
+    }
+
     &:hover {
       color: var(--color-primary);
     }
   }
 `
-
-const activeStyles = {
-  borderBottom: "0.2rem solid var(--color-primary-light)",
-}
 
 const NavLink = () => {
   return (
@@ -40,7 +40,7 @@ const NavLink = () => {
         {links.map(link => {
           return (
             <li className="list-item" key={link.id}>
-              <Link className="link" to={link.url} activeStyle={activeStyles}>
+              <Link className="link" to={link.url}>
                 {link.text}
               </Link>
             </li>
