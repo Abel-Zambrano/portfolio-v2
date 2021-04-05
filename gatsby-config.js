@@ -17,16 +17,20 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-strapi",
-      options: {
-        apiURL: "http://localhost:1337",
-        contentTypes: [
-          // List of the Content Types you want to be able to request from Gatsby.
-          "project",
-          "user",
-        ],
-        queryLimit: 1000,
+    resolve: `gatsby-source-strapi`,
+    options: {
+      apiURL: `http://localhost:1337`,
+      queryLimit: 1000, // Default to 100
+      contentTypes: [`project`, `user`],
+      //If using single types place them in this array.
+      singleTypes: [`home-page`, `contact`],
+      // Possibility to login with a strapi user, when content types are not publically available (optional).
+      loginData: {
+        identifier: "",
+        password: "",
       },
+    },
+  },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
