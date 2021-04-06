@@ -97,7 +97,6 @@ const Header = ({ id }) => {
     } else {
       setNavColor(false)
     }
-    console.log(window.scrollY)
   }
 
   window.addEventListener("scroll", navColorHandler)
