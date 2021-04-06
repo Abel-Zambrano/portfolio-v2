@@ -4,16 +4,15 @@ import { useStaticQuery, graphql } from "gatsby"
 const Test = () => {
   const data = useStaticQuery(graphql`
     {
-      strapiProjects {
-        id
-        title
-        webURL
-        gitURL
-        children {
-          ... on ImageSharp {
+      allStrapiProjects {
+        edges {
+          node {
+            gitURL
             id
-            fluid {
-              src
+            title
+            webURL
+            preview {
+              url
             }
           }
         }
@@ -21,12 +20,29 @@ const Test = () => {
     }
   `)
 
-  const testQuery = data.strapiProjects
+  const query = data.allStrapiProjects.edges
+  const imgQuery = query[0].node.preview[0].url
+  console.log(imgQuery)
+  console.log(query)
   return (
     <div>
-      <p>{testQuery.title}</p>
-      <img src={testQuery.webURL} alt="rocket burger" />
-      <a href={testQuery.gitURL}>GITHUB</a>
+      {query.map(e => {
+        return (
+          <div>
+            <h1>{e.node.title}</h1>
+            <a href={e.node.webURL}>Web Site</a>
+            <p>{e.node.preview.url}</p>
+            {/* <img
+              src={`http://localhost:1337${e.node.preview[0].url}`}
+              alt={e.node.id}
+            /> */}
+          </div>
+        )
+      })}
+
+      {/* <p>{query.title}</p>
+      <img src={query.webURL} alt="rocket burger" />
+      <a href={query.gitURL}>GITHUB</a> */}
     </div>
   )
 }
