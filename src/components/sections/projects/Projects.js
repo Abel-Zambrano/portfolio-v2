@@ -3,6 +3,7 @@ import styled from "styled-components"
 import data from "../../../JS/data"
 
 import CardTitle from "../../CardTitle"
+import Test from "./Test"
 
 const StyledProjects = styled.div`
   display: flex;
@@ -19,6 +20,7 @@ const Projects = () => {
     <StyledProjects>
       <CardTitle title={data[3].title} />
       <h1>Coming Soon...</h1>
+      <Test />
     </StyledProjects>
   )
 }

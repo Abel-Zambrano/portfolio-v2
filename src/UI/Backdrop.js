@@ -8,6 +8,7 @@ const StyledBackdrop = styled.div`
   height: 100%;
   position: fixed;
   z-index: 5;
+  top: 0;
   background-color: rgba(0, 0, 0, 0.7);
 `
 
