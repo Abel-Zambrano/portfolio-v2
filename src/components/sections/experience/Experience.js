@@ -4,7 +4,7 @@ import data from "../../../JS/data"
 
 import CardTitle from "../../CardTitle"
 import ScreenShot from "./ScreenShot"
-import ExperienceLink from "./ExperienceLink"
+import ExperienceLink from "../../LinksOverImage"
 
 const StyledExperience = styled.div`
   display: flex;
@@ -16,12 +16,14 @@ const StyledExperience = styled.div`
   width: 100%;
 `
 
+// ! need to update ExperinceLink Component
+
 const Experience = () => {
   return (
     <StyledExperience>
       <CardTitle title={data[2].title} />
       <ScreenShot>
-        <ExperienceLink />
+        <ExperienceLink title="an janitorial" />
       </ScreenShot>
     </StyledExperience>
   )

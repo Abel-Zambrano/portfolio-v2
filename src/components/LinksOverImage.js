@@ -34,6 +34,7 @@ const StyledExperienceLink = styled.div`
   .title {
     font-size: 3rem;
     color: var(--color-white);
+    text-transform: uppercase;
   }
 
   .link {
@@ -81,17 +82,17 @@ const StyledExperienceLink = styled.div`
   }
 `
 
-const ExperienceLink = () => {
+const ExperienceLink = ({ title, webLink, gitLink }) => {
   return (
     <StyledExperienceLink>
       <div className="title-box">
-        <h2 className="title">AN JANITORIAL</h2>
+        <h2 className="title">{title}</h2>
       </div>
       <div className="icon-container">
         <div className="icon-text-box">
           <a
             className="link"
-            href="https://www.anjanitorialservice.com/"
+            href={webLink}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -102,7 +103,7 @@ const ExperienceLink = () => {
         <div className="icon-text-box">
           <a
             className="link"
-            href="https://github.com/Abel-Zambrano/an-janitorial-service"
+            href={gitLink}
             target="_blank"
             rel="noopener noreferrer"
           >
