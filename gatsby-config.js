@@ -31,18 +31,11 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-strapi`,
+      resolve: `gatsby-source-contentful`,
       options: {
-        apiURL: `http://localhost:1337`,
-        queryLimit: 1000, // Default to 100
-        contentTypes: [`projects`],
-        //If using single types place them in this array.
-        singleTypes: [],
-        // Possibility to login with a strapi user, when content types are not publically available (optional).
-        loginData: {
-          identifier: "",
-          password: "",
-        },
+        spaceId: `x5li07z5ibfp`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
   ],
