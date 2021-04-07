@@ -1,5 +1,5 @@
 require("dotenv").config({
-  path: ".env.${process.env.NODE_ENV}",
+  path: `.env.${process.env.NODE_ENV}`,
 })
 module.exports = {
   siteMetadata: {
@@ -34,8 +34,7 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `x5li07z5ibfp`,
-        // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        accessToken: process.env.CON_TOKEN,
       },
     },
   ],
