@@ -8,8 +8,12 @@ const StyledSection = styled.section`
   background-color: var(--color-gray-light);
 `
 
-const Section = ({ children, id }) => {
-  return <StyledSection id={id}>{children}</StyledSection>
+const Section = ({ children, id, className }) => {
+  return (
+    <StyledSection className={className} id={id}>
+      {children}
+    </StyledSection>
+  )
 }
 
 export default Section

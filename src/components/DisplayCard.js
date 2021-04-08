@@ -13,10 +13,14 @@ const StyledExperience = styled.div`
   width: 100%;
 `
 
+const StyledCardTitle = styled(CardTitle)`
+  margin: 4rem auto;
+`
+
 const DisplayCard = ({ children, title }) => {
   return (
     <StyledExperience>
-      <CardTitle title={title} />
+      <StyledCardTitle title={title} />
       {children}
     </StyledExperience>
   )

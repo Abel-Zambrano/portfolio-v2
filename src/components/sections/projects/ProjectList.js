@@ -9,6 +9,9 @@ const StyledBackgroundImage = styled(BackgroundImage)`
   height: 40rem;
   background-repeat: no-repeat;
   transition: 0.3s;
+  margin: 6rem auto;
+  box-shadow: 1rem 1rem 2rem 1rem rgba(0, 0, 0, 0.4);
+  background-size: contain;
 
   &:hover {
     transform: scale(1.1);
@@ -20,15 +23,15 @@ const StyledBackgroundImage = styled(BackgroundImage)`
   }
 `
 
-const ExpScreenshot = () => {
+const ProjectList = () => {
   const data = useStaticQuery(graphql`
     {
-      allContentfulExperience {
+      allContentfulProject {
         nodes {
-          company
+          webUrl
           gitUrl
           id
-          webUrl
+          title
           preview {
             fluid {
               ...GatsbyContentfulFluid
@@ -40,18 +43,18 @@ const ExpScreenshot = () => {
   `)
 
   const {
-    allContentfulExperience: { nodes: exp },
+    allContentfulProject: { nodes: project },
   } = data
 
   return (
     <div>
-      {exp.map(e => {
+      {project.map(p => {
         return (
-          <StyledBackgroundImage id={e.id} fluid={e.preview.fluid}>
+          <StyledBackgroundImage id={p.id} fluid={p.preview.fluid}>
             <LinksOverImage
-              title={e.company}
-              webLink={e.webUrl}
-              gitLink={e.gitUrl}
+              title={p.title}
+              webLink={p.webUrl}
+              gitLink={p.gitUrl}
             />
           </StyledBackgroundImage>
         )
@@ -60,4 +63,4 @@ const ExpScreenshot = () => {
   )
 }
 
-export default ExpScreenshot
+export default ProjectList

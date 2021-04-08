@@ -12,7 +12,9 @@ import About from "../components/sections/about/About"
 import Skills from "../components/sections/Skills"
 import DisplayCard from "../components/DisplayCard"
 import Contact from "../components/sections/Contact"
-import ExpScreenshot from "../components/sections/experience/ExpScreenshot"
+import ExperienceList from "../components/sections/experience/ExperienceList"
+import ProjectList from "../components/sections/projects/ProjectList"
+import SectionImages from "../components/sections/SectionImages"
 
 const IndexPage = () => (
   <>
@@ -30,14 +32,16 @@ const IndexPage = () => (
         <Section id="skills">
           <Skills />
         </Section>
-        <Section id={data[2].title}>
+        <SectionImages id={data[2].title}>
           <DisplayCard title={data[2].title}>
-            <ExpScreenshot />
+            <ExperienceList />
           </DisplayCard>
-        </Section>
-        <Section id={data[3].title}>
-          <DisplayCard title={data[3].title}></DisplayCard>
-        </Section>
+        </SectionImages>
+        <SectionImages id={data[3].title}>
+          <DisplayCard title={data[3].title}>
+            <ProjectList />
+          </DisplayCard>
+        </SectionImages>
         <Section id="contact">
           <Contact />
         </Section>
