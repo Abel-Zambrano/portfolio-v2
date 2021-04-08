@@ -1,10 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import data from "../../../JS/data"
 
 import CardTitle from "../../CardTitle"
-import ScreenShot from "./ScreenShot"
-import ExperienceLink from "../../LinksOverImage"
+import ExpScreenshot from "./ExpScreenshot"
 
 const StyledExperience = styled.div`
   display: flex;
@@ -16,17 +14,13 @@ const StyledExperience = styled.div`
   width: 100%;
 `
 
-// ! need to update ExperinceLink Component
-
-const Experience = () => {
+const DisplayCard = ({ children, title }) => {
   return (
     <StyledExperience>
-      <CardTitle title={data[2].title} />
-      <ScreenShot>
-        <ExperienceLink title="an janitorial" />
-      </ScreenShot>
+      <CardTitle title={title} />
+      {children}
     </StyledExperience>
   )
 }
 
-export default Experience
+export default DisplayCard

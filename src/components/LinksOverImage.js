@@ -82,7 +82,7 @@ const StyledExperienceLink = styled.div`
   }
 `
 
-const ExperienceLink = ({ title, webLink, gitLink }) => {
+const LinksOverImage = ({ title, webLink, gitLink }) => {
   return (
     <StyledExperienceLink>
       <div className="title-box">
@@ -116,4 +116,4 @@ const ExperienceLink = ({ title, webLink, gitLink }) => {
   )
 }
 
-export default ExperienceLink
+export default LinksOverImage
