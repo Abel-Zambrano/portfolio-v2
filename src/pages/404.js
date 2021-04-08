@@ -1,12 +1,23 @@
 import React from "react"
+import styled from "styled-components"
+import GlobalStyles from "../globalStyles"
 
 import Layout from "../components/layout/Layout"
+import PageNotFound from "../components/PageNotFound"
+
+const StyledNotFoundPage = styled.div`
+  height: 100vh;
+`
 
 const NotFoundPage = () => (
-  <Layout>
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
+  <>
+    <GlobalStyles />
+    <Layout id="light-page">
+      <StyledNotFoundPage>
+        <PageNotFound />
+      </StyledNotFoundPage>
+    </Layout>
+  </>
 )
 
 export default NotFoundPage
