@@ -19,7 +19,7 @@ const Connect = () => {
   return (
     <MessageProvider>
       <GlobalStyles />
-      <Layout id="connect-page">
+      <Layout id="light-page">
         <StyledConnect>
           <PageConnect />
         </StyledConnect>

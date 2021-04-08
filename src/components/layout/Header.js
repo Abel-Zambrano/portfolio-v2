@@ -20,7 +20,7 @@ const StyledHeader = styled.div`
     background-color: var(--color-jetblack);
   }
 
-  &#connect-page {
+  &#light-page {
     background-color: var(--color-jetblack);
   }
 
