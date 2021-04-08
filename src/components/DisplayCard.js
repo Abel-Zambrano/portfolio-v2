@@ -1,8 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import CardTitle from "../../CardTitle"
-import ExpScreenshot from "./ExpScreenshot"
+import CardTitle from "./CardTitle"
 
 const StyledExperience = styled.div`
   display: flex;

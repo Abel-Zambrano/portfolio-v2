@@ -10,9 +10,8 @@ import Section from "../components/sections/Section"
 import Content from "../components/sections/Content"
 import About from "../components/sections/about/About"
 import Skills from "../components/sections/Skills"
-import DisplayCard from "../components/sections/experience/DisplayCard"
+import DisplayCard from "../components/DisplayCard"
 import Contact from "../components/sections/Contact"
-import CardTitle from "../components/CardTitle"
 import ExpScreenshot from "../components/sections/experience/ExpScreenshot"
 
 const IndexPage = () => (
