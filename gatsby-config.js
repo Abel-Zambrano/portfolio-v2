@@ -37,5 +37,11 @@ module.exports = {
         accessToken: process.env.CON_TOKEN,
       },
     },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Add any options here
+      },
+    },
   ],
 }
