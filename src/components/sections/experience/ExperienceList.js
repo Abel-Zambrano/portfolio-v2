@@ -50,7 +50,7 @@ const ExpScreenshot = () => {
     <div>
       {exp.map(e => {
         return (
-          <StyledBackgroundImage id={e.id} fluid={e.preview.fluid}>
+          <StyledBackgroundImage key={e.id} fluid={e.preview.fluid}>
             <LinksOverImage
               title={e.company}
               webLink={e.webUrl}

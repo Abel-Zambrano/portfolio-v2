@@ -50,7 +50,7 @@ const ProjectList = () => {
     <div>
       {project.map(p => {
         return (
-          <StyledBackgroundImage id={p.id} fluid={p.preview.fluid}>
+          <StyledBackgroundImage key={p.id} fluid={p.preview.fluid}>
             <LinksOverImage
               title={p.title}
               webLink={p.webUrl}
