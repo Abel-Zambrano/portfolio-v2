@@ -86,6 +86,7 @@ const Header = ({ id }) => {
 
   useEffect(() => {
     window.addEventListener("scroll", scrollHandler)
+    window.addEventListener("scroll", navColorHandler)
 
     // cleanup
     return () => window.removeEventListener("scroll", scrollHandler)
@@ -98,8 +99,6 @@ const Header = ({ id }) => {
       setNavColor(false)
     }
   }
-
-  window.addEventListener("scroll", navColorHandler)
 
   const data = useStaticQuery(graphql`
     {
