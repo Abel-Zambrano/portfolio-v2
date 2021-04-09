@@ -3,7 +3,6 @@ import { createGlobalStyle } from "styled-components"
 // media queries sizes: 1000px, 490px
 
 const GlobalStyles = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap');
 
 :root {
     --color-primary: #00cccc;
@@ -42,19 +41,5 @@ body{
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
 }
-
-/* h1 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-}
-
-h2{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-} */
-
-/* p{
-    font-family: 'Roboto Mono', monospace;
-} */
 `
 export default GlobalStyles
