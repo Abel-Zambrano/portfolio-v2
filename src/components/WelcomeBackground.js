@@ -11,11 +11,6 @@ const StyledBgImage = styled(BgImage)`
   align-items: center;
   max-width: 100vw;
   height: 84vh;
-  background-attachment: fixed;
-
-  @media screen and (max-width: 600px) {
-    background-attachment: scroll !important;
-  }
 `
 
 const WelcomeBackground = ({ children }) => {

@@ -24,7 +24,12 @@ const IndexPage = () => (
     </Helmet>
     <GlobalStyles />
     <Layout>
-      <WelcomeBackground>{/* <WelcomeText /> */}</WelcomeBackground>
+      <WelcomeBackground>
+        <BlackOverlay>
+          <WelcomeText />
+        </BlackOverlay>
+      </WelcomeBackground>
+
       <Content>
         <Section id="about">
           <About />
