@@ -42,6 +42,7 @@ body{
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     overflow-x: hidden;
+    overflow-x: -moz-hidden-unscrollable;
 }
 `
 export default GlobalStyles
