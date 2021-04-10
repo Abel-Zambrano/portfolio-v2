@@ -30,9 +30,7 @@ const WelcomeBackground = ({ children }) => {
   const imageData = data.file.childImageSharp.fluid
 
   return (
-    <StyledBackgroundImage id="BG" fluid={imageData}>
-      {children}
-    </StyledBackgroundImage>
+    <StyledBackgroundImage fluid={imageData}>{children}</StyledBackgroundImage>
   )
 }
 
