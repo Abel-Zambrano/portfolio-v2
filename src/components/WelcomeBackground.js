@@ -15,7 +15,7 @@ const WelcomeBackground = ({ children }) => {
     {
       file(relativePath: { eq: "forest.jpg" }) {
         childImageSharp {
-          fluid(quality: 95, fit: CONTAIN, cropFocus: CENTER) {
+          fluid(maxWidth: 1000, quality: 95, fit: CONTAIN, cropFocus: CENTER) {
             ...GatsbyImageSharpFluid
           }
         }
