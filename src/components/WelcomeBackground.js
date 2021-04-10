@@ -14,7 +14,7 @@ const StyledBgImage = styled(BgImage)`
   background-attachment: fixed;
 
   @media screen and (max-width: 600px) {
-    background-attachment: scroll;
+    background-attachment: scroll !important;
   }
 `
 
