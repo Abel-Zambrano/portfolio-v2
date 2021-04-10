@@ -35,11 +35,13 @@ html {
     font-size: 62.5%;
     letter-spacing: 0.1rem;
     scroll-behavior: smooth;
+    /* width: min-content; */
 }
 
 body{
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
+    overflow-x: hidden;
 }
 `
 export default GlobalStyles
