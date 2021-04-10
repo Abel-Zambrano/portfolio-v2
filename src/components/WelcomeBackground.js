@@ -17,7 +17,11 @@ const WelcomeBackground = ({ children }) => {
       query {
         forestBackground: file(relativePath: { eq: "forest.jpg" }) {
           childImageSharp {
-            gatsbyImageData(width: 2000, quality: 95)
+            gatsbyImageData(
+              width: 2000
+              quality: 95
+              webpOptions: { quality: 70 }
+            )
           }
         }
       }
