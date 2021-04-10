@@ -5,8 +5,9 @@ import styled from "styled-components"
 import BackgroundImage from "gatsby-background-image"
 
 const StyledBackgroundImage = styled(BackgroundImage)`
-  width: 100%;
+  width: 100vw;
   height: 84vh;
+  /* background-size: cover; */
   background-attachment: fixed;
 `
 
@@ -15,7 +16,7 @@ const WelcomeBackground = ({ children }) => {
     {
       file(relativePath: { eq: "forest.jpg" }) {
         childImageSharp {
-          fluid(quality: 95, fit: INSIDE, cropFocus: CENTER) {
+          fluid(quality: 95, fit: COVER, cropFocus: CENTER) {
             ...GatsbyImageSharpFluid
           }
         }

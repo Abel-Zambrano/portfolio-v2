@@ -33,7 +33,7 @@ const ProjectList = () => {
           id
           title
           preview {
-            fluid {
+            fluid(quality: 95) {
               ...GatsbyContentfulFluid
             }
           }

@@ -33,7 +33,7 @@ const ExpScreenshot = () => {
           id
           webUrl
           preview {
-            fluid {
+            fluid(quality: 95) {
               ...GatsbyContentfulFluid
             }
           }
