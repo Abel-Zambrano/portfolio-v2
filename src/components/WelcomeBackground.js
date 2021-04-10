@@ -2,32 +2,31 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
-import BackgroundImage from "gatsby-background-image"
+import { getImage } from "gatsby-plugin-image"
+import { BgImage } from "gbimage-bridge"
 
-const StyledBackgroundImage = styled(BackgroundImage)`
+const StyledBgImage = styled(BgImage)`
   width: 100vw;
   height: 84vh;
   background-attachment: fixed;
 `
 
 const WelcomeBackground = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    {
-      file(relativePath: { eq: "forest.jpg" }) {
-        childImageSharp {
-          fluid(quality: 95) {
-            ...GatsbyImageSharpFluid
+  const { forestBackground } = useStaticQuery(
+    graphql`
+      query {
+        forestBackground: file(relativePath: { eq: "forest.jpg" }) {
+          childImageSharp {
+            gatsbyImageData(width: 2000, quality: 95)
           }
         }
       }
-    }
-  `)
-
-  const imageData = data.file.childImageSharp.fluid
-
-  return (
-    <StyledBackgroundImage fluid={imageData}>{children}</StyledBackgroundImage>
+    `
   )
+
+  const pluginImage = getImage(forestBackground)
+
+  return <StyledBgImage image={pluginImage}>{children}</StyledBgImage>
 }
 
 export default WelcomeBackground
