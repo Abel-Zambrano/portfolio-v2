@@ -91,7 +91,7 @@ const WelcomeText = () => {
   return (
     <WelcomeTextWrapper>
       <Text1>{`${welcome}, I'm Abel!`}</Text1>
-      <Text2>Welcome to my Portfolio</Text2>
+      <Text2>Welcome to My Portfolio</Text2>
       <SmallText>Front-End Developer / UI</SmallText>
     </WelcomeTextWrapper>
   )
