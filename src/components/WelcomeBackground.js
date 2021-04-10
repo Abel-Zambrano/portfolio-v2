@@ -7,8 +7,11 @@ import BackgroundImage from "gatsby-background-image"
 const StyledBackgroundImage = styled(BackgroundImage)`
   width: 100vw;
   height: 84vh;
-  /* background-size: cover; */
   background-attachment: fixed;
+
+  @media screen and (max-width: 490px) {
+    background-size: cover;
+  }
 `
 
 const WelcomeBackground = ({ children }) => {
