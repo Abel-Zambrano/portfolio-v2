@@ -4,13 +4,14 @@ import styled from "styled-components"
 
 import BackgroundImage from "gatsby-background-image"
 
+const Container = styled.div``
+
 const StyledBackgroundImage = styled(BackgroundImage)`
   width: 100vw;
   height: 84vh;
   background-attachment: fixed;
 
   @media screen and (max-width: 490px) {
-    background-size: cover;
   }
 `
 
@@ -30,7 +31,11 @@ const WelcomeBackground = ({ children }) => {
   const imageData = data.file.childImageSharp.fluid
 
   return (
-    <StyledBackgroundImage fluid={imageData}>{children}</StyledBackgroundImage>
+    <Container>
+      <StyledBackgroundImage fluid={imageData}>
+        {children}
+      </StyledBackgroundImage>
+    </Container>
   )
 }
 
