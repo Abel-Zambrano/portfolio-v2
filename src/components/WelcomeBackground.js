@@ -12,6 +12,11 @@ const StyledBgImage = styled(BgImage)`
   width: 100%;
   min-height: 84vh;
   background-attachment: fixed;
+
+  @media screen and (max-width: 600px) {
+    max-width: 100rem;
+    min-height: 90vh;
+  }
 `
 
 const WelcomeBackground = ({ children }) => {
