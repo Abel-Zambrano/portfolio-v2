@@ -35,7 +35,8 @@ html {
     font-size: 62.5%;
     letter-spacing: 0.1rem;
     scroll-behavior: smooth;
-    /* width: min-content; */
+    overflow-x: hidden;
+    overflow-x: -moz-hidden-unscrollable;
 }
 
 body{
