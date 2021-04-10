@@ -9,13 +9,13 @@ const StyledBgImage = styled(BgImage)`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  max-width: 100vw;
   min-height: 84vh;
   /* background-attachment: fixed; */
 
-  /* @media screen and (max-width: 600px) {
-    background-attachment: scroll !important;
-  } */
+  @media screen and (max-width: 600px) {
+    /* background-attachment: scroll !important; */
+  }
 `
 
 const WelcomeBackground = ({ children }) => {
