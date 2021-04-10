@@ -8,10 +8,6 @@ const StyledBackgroundImage = styled(BackgroundImage)`
   width: 100vw;
   height: 84vh;
   background-attachment: fixed;
-
-  @media screen and (max-width: 490px) {
-    background-size: auto !important;
-  }
 `
 
 const WelcomeBackground = ({ children }) => {
@@ -19,7 +15,7 @@ const WelcomeBackground = ({ children }) => {
     {
       file(relativePath: { eq: "forest.jpg" }) {
         childImageSharp {
-          fluid(quality: 95, cropFocus: CENTER) {
+          fluid(quality: 95) {
             ...GatsbyImageSharpFluid
           }
         }
