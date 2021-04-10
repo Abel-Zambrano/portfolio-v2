@@ -13,10 +13,15 @@ const StyledBgImage = styled(BgImage)`
   min-height: 84vh;
   background-attachment: fixed;
 
-  @media screen and (max-width: 600px) {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  /* @media screen and (max-width: 600px) {
     max-width: 100rem;
     min-height: 90vh;
-  }
+  } */
 `
 
 const WelcomeBackground = ({ children }) => {
