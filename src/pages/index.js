@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import GlobalStyles from "../globalStyles"
 import data from "../JS/data"
 
@@ -18,6 +19,9 @@ import SectionImages from "../components/sections/SectionImages"
 
 const IndexPage = () => (
   <>
+    <Helmet>
+      <title>AZ | Web Dev</title>
+    </Helmet>
     <GlobalStyles />
     <Layout>
       <WelcomeBackground>
