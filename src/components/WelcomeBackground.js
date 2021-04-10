@@ -7,8 +7,6 @@ import BackgroundImage from "gatsby-background-image"
 const StyledBackgroundImage = styled(BackgroundImage)`
   width: 100%;
   height: 84vh;
-  background-position: center;
-  background-repeat: no-repeat;
   background-attachment: fixed;
 `
 
@@ -17,7 +15,7 @@ const WelcomeBackground = ({ children }) => {
     {
       file(relativePath: { eq: "forest.jpg" }) {
         childImageSharp {
-          fluid(quality: 95) {
+          fluid(quality: 95, fit: CONTAIN, cropFocus: CENTER) {
             ...GatsbyImageSharpFluid
           }
         }
