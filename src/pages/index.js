@@ -25,9 +25,7 @@ const IndexPage = () => (
     <GlobalStyles />
     <Layout>
       <WelcomeBackground>
-        <BlackOverlay>
-          <WelcomeText />
-        </BlackOverlay>
+        <WelcomeText />
       </WelcomeBackground>
       <Content>
         <Section id="about">

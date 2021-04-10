@@ -6,8 +6,11 @@ import { getImage } from "gatsby-plugin-image"
 import { BgImage } from "gbimage-bridge"
 
 const StyledBgImage = styled(BgImage)`
-  width: 100vw;
-  height: 84vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 84vh;
   background-attachment: fixed;
 `
 

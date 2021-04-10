@@ -5,6 +5,7 @@ const StyledBlackOverlay = styled.div`
   display: -webkit-flex; /*Safari*/
   display: flex;
   background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
   height: 100%;
   text-align: center;
   align-items: center;

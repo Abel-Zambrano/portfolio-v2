@@ -25,7 +25,11 @@ const smallTextAnimation = keyframes`
   }
 `
 
-const WelcomeTextWrapper = styled.div``
+const WelcomeTextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+`
 
 const Text1 = styled.h1`
   visibility: hidden;
@@ -35,7 +39,6 @@ const Text1 = styled.h1`
   line-height: 8rem;
   animation: ${textAnimation} 2s ease-in-out;
   animation-fill-mode: forwards;
-
   @media screen and (max-width: 490px) {
     font-size: 3rem;
   }
