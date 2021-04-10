@@ -10,7 +10,7 @@ const StyledBgImage = styled(BgImage)`
   justify-content: center;
   align-items: center;
   max-width: 100vw;
-  min-height: 84vh;
+  height: 84vh;
   /* background-attachment: fixed; */
 
   @media screen and (max-width: 600px) {
