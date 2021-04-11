@@ -105,6 +105,9 @@ const Form = () => {
     setMessage(true)
   }
 
+  //!Checking
+  //TODO clear checking comment
+
   return (
     <>
       <StyledForm method="post" onSubmit={sendEmail}>
