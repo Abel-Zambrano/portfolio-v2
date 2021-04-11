@@ -2,7 +2,6 @@ import React, { useContext } from "react"
 import styled from "styled-components"
 import emailjs from "emailjs-com"
 import { MessageContext } from "../context/MessageContext"
-import { init } from "emailjs-com"
 
 import Button from "./Button"
 
@@ -92,7 +91,7 @@ const Form = () => {
         process.env.SERVICE_ID,
         process.env.TEMPLATE_ID,
         e.target,
-        init(process.env.USER_ID)
+        process.env.USER_ID
       )
       .then(
         function (response) {
@@ -111,7 +110,7 @@ const Form = () => {
 
   return (
     <>
-      <StyledForm method="post" onSubmit={sendEmail}>
+      <StyledForm onSubmit={sendEmail}>
         <Column>
           <Row>
             <NameDiv>

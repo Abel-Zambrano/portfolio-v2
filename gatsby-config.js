@@ -43,11 +43,5 @@ module.exports = {
         // Add any options here
       },
     },
-    {
-      resolve: `emailjs-com`,
-      options: {
-        user_id: process.env.USER_ID,
-      },
-    },
   ],
 }
