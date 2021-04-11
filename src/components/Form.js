@@ -2,6 +2,7 @@ import React, { useContext } from "react"
 import styled from "styled-components"
 import emailjs from "emailjs-com"
 import { MessageContext } from "../context/MessageContext"
+import { init } from "emailjs-com"
 
 import Button from "./Button"
 
@@ -91,7 +92,7 @@ const Form = () => {
         process.env.SERVICE_ID,
         process.env.TEMPLATE_ID,
         e.target,
-        process.env.USER_ID
+        init(process.env.USER_ID)
       )
       .then(
         function (response) {
