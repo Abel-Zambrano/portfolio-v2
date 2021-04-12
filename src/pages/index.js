@@ -29,7 +29,6 @@ const IndexPage = () => (
           <WelcomeText />
         </BlackOverlay>
       </WelcomeBackground>
-
       <Content>
         <Section id="about">
           <About />
