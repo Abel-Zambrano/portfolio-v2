@@ -1,9 +1,17 @@
 import React, { useContext } from "react"
 import { MessageContext } from "../context/MessageContext"
+import styled from "styled-components"
 
 import Form from "./Form"
 import CardTitle from "./CardTitle"
 import Modal from "../UI/Modal"
+
+const StyledCardTitle = styled(CardTitle)`
+  @media screen and (max-width: 490px) {
+    font-size: 2rem;
+    margin: 2rem auto;
+  }
+`
 
 const PageConnect = () => {
   const [message, setMessage] = useContext(MessageContext)
@@ -14,7 +22,7 @@ const PageConnect = () => {
 
   return (
     <>
-      <CardTitle title="Contact Form" />
+      <StyledCardTitle title="Contact Form" />
       <Form />
       {message ? (
         <Modal

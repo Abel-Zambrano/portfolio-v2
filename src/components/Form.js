@@ -14,7 +14,7 @@ const StyledForm = styled.form`
   box-shadow: 1rem 1rem 2rem 0.2rem rgba(0, 0, 0, 0.2);
 
   @media screen and (max-width: 490px) {
-    width: 96vw;
+    width: 80vw;
   }
 `
 

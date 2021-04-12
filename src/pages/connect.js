@@ -13,6 +13,10 @@ const StyledConnect = styled.div`
   align-items: center;
   background-color: var(--color-gray-light);
   height: 100rem;
+
+  @media screen and (max-width: 490px) {
+    justify-content: center;
+  }
 `
 
 const Connect = () => {
