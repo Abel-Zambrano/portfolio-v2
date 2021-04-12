@@ -5,7 +5,6 @@ import data from "../JS/data"
 
 import Layout from "../components/layout/Layout"
 import WelcomeBackground from "../components/WelcomeBackground"
-import BlackOverlay from "../components/BlackOverlay"
 import WelcomeText from "../components/WelcomeText"
 import Section from "../components/sections/Section"
 import Content from "../components/sections/Content"
@@ -16,6 +15,7 @@ import Contact from "../components/sections/Contact"
 import ExperienceList from "../components/sections/experience/ExperienceList"
 import ProjectList from "../components/sections/projects/ProjectList"
 import SectionImages from "../components/sections/SectionImages"
+import WelcomeContainer from "../components/WelcomeContainer"
 
 const IndexPage = () => (
   <>
@@ -24,11 +24,10 @@ const IndexPage = () => (
     </Helmet>
     <GlobalStyles />
     <Layout>
-      <WelcomeBackground>
-        <BlackOverlay>
-          <WelcomeText />
-        </BlackOverlay>
-      </WelcomeBackground>
+      <WelcomeContainer>
+        <WelcomeBackground />
+        <WelcomeText />
+      </WelcomeContainer>
       <Content>
         <Section id="about">
           <About />

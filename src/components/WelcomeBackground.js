@@ -11,6 +11,7 @@ const StyledBgImage = styled(BgImage)`
   align-items: center;
   max-width: 100vw;
   height: 84vh;
+  filter: brightness(60%);
 `
 
 const WelcomeBackground = ({ children }) => {

@@ -29,6 +29,11 @@ const WelcomeTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
 `
 
 const Text1 = styled.h1`
@@ -39,8 +44,9 @@ const Text1 = styled.h1`
   line-height: 8rem;
   animation: ${textAnimation} 2s ease-in-out;
   animation-fill-mode: forwards;
+
   @media screen and (max-width: 490px) {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 `
 
@@ -54,7 +60,7 @@ const Text2 = styled.h1`
   animation-fill-mode: forwards;
 
   @media screen and (max-width: 490px) {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 `
 
