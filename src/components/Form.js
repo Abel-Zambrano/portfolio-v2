@@ -88,10 +88,10 @@ const Form = () => {
     e.preventDefault()
     emailjs
       .sendForm(
-        process.env.SERVICE_ID,
-        process.env.TEMPLATE_ID,
+        process.env.GATSBY_SERVICE_ID,
+        process.env.GATSBY_TEMPLATE_ID,
         e.target,
-        process.env.USER_ID
+        process.env.GATSBY_USER_ID
       )
       .then(
         function (response) {
