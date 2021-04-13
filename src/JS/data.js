@@ -19,7 +19,7 @@ const data = [
   {
     title: "contact",
     text:
-      "Do you have any project ideas or would like to collaborate?...Let's connect!",
+      "Do you have a project idea or would like to collaborate?...Let's connect!",
   },
 ]
 
