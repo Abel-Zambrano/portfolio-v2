@@ -16,6 +16,7 @@ import ExperienceList from "../components/sections/experience/ExperienceList"
 import ProjectList from "../components/sections/projects/ProjectList"
 import SectionImages from "../components/sections/SectionImages"
 import WelcomeContainer from "../components/WelcomeContainer"
+import CardTitle from "../components/CardTitle"
 
 const IndexPage = () => (
   <>
@@ -37,6 +38,7 @@ const IndexPage = () => (
         </Section>
         <SectionImages id={data[2].title}>
           <DisplayCard title={data[2].title}>
+            <CardTitle className="black-title" title="(More coming soon...)" />
             <ExperienceList />
           </DisplayCard>
         </SectionImages>

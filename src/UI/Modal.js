@@ -15,6 +15,10 @@ const StyledModal = styled.div`
   top: 20%;
   text-align: center;
   position: absolute;
+
+  @media screen and (max-width: 490px) {
+    width: 80vw;
+  }
 `
 const TextDiv = styled.div``
 
@@ -43,6 +47,10 @@ const Button = styled.button`
   &:hover {
     background-color: var(--color-green);
     color: var(--color-white);
+  }
+
+  @media screen and (max-width: 490px) {
+    width: 50%;
   }
 `
 

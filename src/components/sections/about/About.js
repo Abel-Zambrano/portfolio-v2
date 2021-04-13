@@ -3,6 +3,7 @@ import styled from "styled-components"
 import CardTitle from "../../CardTitle"
 import Avatar from "../about/Avatar"
 import data from "../../../JS/data"
+import Interests from "./Interests"
 
 const AboutWrapper = styled.article`
   display: flex;
@@ -12,17 +13,22 @@ const AboutWrapper = styled.article`
   text-align: center;
   height: 100%;
   width: 100%;
-`
 
-const Text = styled.p`
-  max-width: 58rem;
-  line-height: 2rem;
-  font-size: 1.52rem;
-  color: var(--color-jetblack);
-`
+  .text {
+    max-width: 60rem;
+    line-height: 2rem;
+    font-size: 1.52rem;
+    color: var(--color-jetblack);
+  }
 
-const SpanFocus = styled.span`
-  color: var(--color-primary-dark);
+  .span-focus {
+    color: var(--color-primary-dark);
+  }
+
+  .int-title {
+    font-size: 2rem;
+    color: var(--color-gray-dark);
+  }
 `
 
 const About = () => {
@@ -30,11 +36,13 @@ const About = () => {
     <AboutWrapper>
       <CardTitle title={data[0].title} />
       <Avatar />
-      <Text>
+      <p className="text">
         {data[0].infoStart}
-        <SpanFocus>{data[0].infoSpan}</SpanFocus>
+        <span className="span-focus">{data[0].infoSpan}</span>
         {data[0].infoEnd}
-      </Text>
+      </p>
+      {/* <h1 className="int-title">INTERESTS</h1>
+      <Interests /> */}
     </AboutWrapper>
   )
 }
