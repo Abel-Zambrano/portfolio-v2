@@ -3,7 +3,6 @@ import styled from "styled-components"
 import CardTitle from "../../CardTitle"
 import Avatar from "../about/Avatar"
 import data from "../../../JS/data"
-import Interests from "./Interests"
 
 const AboutWrapper = styled.article`
   display: flex;
@@ -41,8 +40,6 @@ const About = () => {
         <span className="span-focus">{data[0].infoSpan}</span>
         {data[0].infoEnd}
       </p>
-      {/* <h1 className="int-title">INTERESTS</h1>
-      <Interests /> */}
     </AboutWrapper>
   )
 }
