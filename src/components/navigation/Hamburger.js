@@ -48,7 +48,7 @@ const StyledHamburger = styled.button`
 
 const Hamburger = ({ onClick, open }) => {
   return (
-    <StyledHamburger open={open} onClick={onClick}>
+    <StyledHamburger open={open} onClick={onClick} alt="navigation">
       <div />
       <div />
       <div />
