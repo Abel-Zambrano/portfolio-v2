@@ -21,6 +21,11 @@ const StyledButton = styled.button`
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 10rem rgba(0, 0, 0, 0.2);
   }
+
+  @media screen and (max-width: 490px) {
+    padding: 1rem 6rem;
+    font-size: 1.5rem;
+  }
 `
 
 const Button = ({ text, clicked }) => {

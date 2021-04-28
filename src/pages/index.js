@@ -38,7 +38,6 @@ const IndexPage = () => (
         </Section>
         <SectionImages id={data[2].title}>
           <DisplayCard title={data[2].title}>
-            <CardTitle className="black-title" title="(More coming soon...)" />
             <ExperienceList />
           </DisplayCard>
         </SectionImages>
