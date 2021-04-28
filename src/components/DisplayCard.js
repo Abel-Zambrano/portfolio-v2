@@ -17,9 +17,9 @@ const StyledCardTitle = styled(CardTitle)`
   margin: 4rem auto;
 `
 
-const DisplayCard = ({ children, title }) => {
+const DisplayCard = ({ children, title, className }) => {
   return (
-    <StyledExperience>
+    <StyledExperience className={className}>
       <StyledCardTitle title={title} />
       {children}
     </StyledExperience>

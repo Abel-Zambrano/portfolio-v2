@@ -5,21 +5,43 @@ import GlobalStyles from "../globalStyles"
 import Layout from "../components/layout/Layout"
 import DisplayCard from "../components/DisplayCard"
 
-const Text = styled.p``
+const StyledNoRepo = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-gray-light);
+  height: 100rem;
+
+  .text-container {
+    max-width: 120rem;
+    padding: auto 6rem;
+  }
+
+  .text {
+    font-size: 2.5rem;
+  }
+`
+
+const StyledDisplayCard = styled(DisplayCard)`
+  justify-content: center;
+`
 
 const norepo = () => {
   return (
-    <div>
+    <StyledNoRepo>
       <GlobalStyles />
-      <Layout>
-        <DisplayCard title="No Repo Available">
-          <Text>
-            The Github Repo is either unavailable due to NDA or it was developed
-            with WordPress.
-          </Text>
-        </DisplayCard>
+      <Layout id="light-page">
+        <StyledDisplayCard>
+          <div className="text-container">
+            <p className="text">
+              The Github Repo is either unavailable due to NDA or it was
+              developed with WordPress.
+            </p>
+          </div>
+        </StyledDisplayCard>
       </Layout>
-    </div>
+    </StyledNoRepo>
   )
 }
 
