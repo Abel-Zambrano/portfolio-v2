@@ -4,8 +4,8 @@ import GlobalStyles from "../globalStyles"
 import data from "../JS/data"
 
 import Layout from "../components/layout/Layout"
-import WelcomeBackground from "../components/WelcomeBackground"
-import WelcomeText from "../components/WelcomeText"
+import WelcomeBackground from "../components/sections/welcome/WelcomeBackground"
+import WelcomeText from "../components/sections/welcome/WelcomeText"
 import Section from "../components/sections/Section"
 import Content from "../components/sections/Content"
 import About from "../components/sections/about/About"
@@ -15,8 +15,7 @@ import Contact from "../components/sections/Contact"
 import ExperienceList from "../components/sections/experience/ExperienceList"
 import ProjectList from "../components/sections/projects/ProjectList"
 import SectionImages from "../components/sections/SectionImages"
-import WelcomeContainer from "../components/WelcomeContainer"
-import CardTitle from "../components/CardTitle"
+import WelcomeContainer from "../components/sections/welcome/WelcomeContainer"
 
 const IndexPage = () => (
   <>
