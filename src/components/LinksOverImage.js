@@ -35,6 +35,10 @@ const StyledExperienceLink = styled.div`
     font-size: 3rem;
     color: var(--color-white);
     text-transform: uppercase;
+
+    @media screen and (max-width: 390px) {
+      font-size: 1.5rem;
+    }
   }
 
   .link {

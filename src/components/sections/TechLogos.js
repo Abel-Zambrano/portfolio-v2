@@ -60,7 +60,7 @@ const StyledTechLogos = styled.ul`
       font-size: 1.2rem;
       text-transform: uppercase;
 
-      @media screen and (max-width: 375px) {
+      @media screen and (max-width: 390px) {
         font-size: 1rem;
       }
     }
