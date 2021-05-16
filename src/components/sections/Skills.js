@@ -5,7 +5,7 @@ import TechLogos from "./TechLogos"
 import data from "../../JS/data"
 
 const SkillsWrapper = styled.article`
-  padding: 6rem 4rem;
+  padding: 6rem auto;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

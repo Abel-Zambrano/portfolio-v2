@@ -5,7 +5,7 @@ import Avatar from "../about/Avatar"
 import data from "../../../JS/data"
 
 const AboutWrapper = styled.article`
-  padding: 6rem 4rem;
+  padding: 6rem auto;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -19,6 +19,8 @@ const AboutWrapper = styled.article`
     line-height: 2rem;
     font-size: 1.52rem;
     color: var(--color-jetblack);
+    padding: 0 4rem;
+    line-height: 2.5rem;
   }
 
   .span-focus {
