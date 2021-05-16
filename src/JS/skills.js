@@ -11,6 +11,8 @@ import { SiNodeDotJs } from "@react-icons/all-files/si/SiNodeDotJs"
 import { SiMongodb } from "@react-icons/all-files/si/SiMongodb"
 import { SiPython } from "@react-icons/all-files/si/SiPython"
 import { SiMysql } from "@react-icons/all-files/si/SiMysql"
+import { SiNextDotJs } from "@react-icons/all-files/si/SiNextDotJs"
+import { SiWordpress } from "@react-icons/all-files/si/SiWordpress"
 
 const skillsData = [
   {
@@ -72,6 +74,16 @@ const skillsData = [
     id: 12,
     name: "mysql",
     logo: <SiMysql />,
+  },
+  {
+    id: 13,
+    name: "next.js",
+    logo: <SiNextDotJs />,
+  },
+  {
+    id: 14,
+    name: "wordpress",
+    logo: <SiWordpress />,
   },
 ]
 
