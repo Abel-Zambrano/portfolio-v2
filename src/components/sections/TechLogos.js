@@ -8,7 +8,6 @@ const StyledTechLogos = styled.ul`
   grid-gap: 3rem;
   list-style: none;
   color: var(--color-white);
-  margin: auto;
 
   @media screen and (max-width: 1000px) {
     margin: 2rem auto;
@@ -16,10 +15,10 @@ const StyledTechLogos = styled.ul`
 
   @media screen and (max-width: 490px) {
     grid-template-columns: auto auto auto;
-    grid-gap: 2rem;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 390px) {
       grid-template-columns: auto auto;
+      grid-gap: 4rem;
     }
   }
 

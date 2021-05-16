@@ -5,10 +5,10 @@ import Avatar from "../about/Avatar"
 import data from "../../../JS/data"
 
 const AboutWrapper = styled.article`
-  padding: 6rem auto;
+  padding: 6rem 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
   height: 50rem;
