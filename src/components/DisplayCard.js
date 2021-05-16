@@ -9,7 +9,7 @@ const StyledExperience = styled.div`
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
 `
 

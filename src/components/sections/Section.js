@@ -4,7 +4,7 @@ import styled from "styled-components"
 const StyledSection = styled.section`
   margin: 24rem auto;
   width: 100%;
-  height: 54rem;
+  height: 100%;
   background-color: var(--color-gray-light);
 `
 

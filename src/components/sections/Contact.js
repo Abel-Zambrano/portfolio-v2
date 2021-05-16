@@ -13,7 +13,7 @@ const Div = styled.article`
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
-  height: 100%;
+  height: 50rem;
   width: 100%;
 `
 

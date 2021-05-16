@@ -17,6 +17,10 @@ const StyledTechLogos = styled.ul`
   @media screen and (max-width: 490px) {
     grid-template-columns: auto auto auto;
     grid-gap: 2rem;
+
+    @media screen and (max-width: 375px) {
+      grid-template-columns: auto auto;
+    }
   }
 
   .list-item {
@@ -24,7 +28,7 @@ const StyledTechLogos = styled.ul`
     justify-content: center;
     padding: 0;
     margin: 0;
-    width: 20rem;
+    width: 16rem;
   }
 
   .icon-container {
@@ -56,6 +60,10 @@ const StyledTechLogos = styled.ul`
       margin-top: 1.4rem;
       font-size: 1.2rem;
       text-transform: uppercase;
+
+      @media screen and (max-width: 375px) {
+        font-size: 1rem;
+      }
     }
   }
 `
