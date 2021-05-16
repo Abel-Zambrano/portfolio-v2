@@ -24,7 +24,14 @@ const StyledTechLogos = styled.ul`
     justify-content: center;
     padding: 0;
     margin: 0;
-    width: 10rem;
+    width: 20rem;
+  }
+
+  .icon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .icon-background {
@@ -43,6 +50,13 @@ const StyledTechLogos = styled.ul`
     align-items: center;
     font-size: 4rem;
     position: relative;
+
+    &-name {
+      color: var(--color-gray-dark);
+      margin-top: 1.4rem;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
   }
 `
 
@@ -50,11 +64,14 @@ const TechLogos = () => {
   return (
     <StyledTechLogos>
       {skillsData.map(skill => {
-        const { id, logo } = skill
+        const { id, logo, name } = skill
         return (
           <li className="list-item" key={id}>
-            <div className="icon-background">
-              <div className="icon">{logo}</div>
+            <div className="icon-container">
+              <div className="icon-background">
+                <div className="icon">{logo}</div>
+              </div>
+              <p className="icon-name">{name}</p>
             </div>
           </li>
         )

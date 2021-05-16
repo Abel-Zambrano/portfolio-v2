@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import CardTitle from "../CardTitle"
-import TechText from "./TechText"
 import TechLogos from "./TechLogos"
 import data from "../../JS/data"
 
@@ -32,7 +31,6 @@ const Skills = () => {
     <SkillsWrapper>
       <CardTitle title={data[1].title} />
       <div className="content">
-        <TechText />
         <TechLogos />
       </div>
     </SkillsWrapper>
