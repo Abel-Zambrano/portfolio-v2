@@ -32,7 +32,8 @@ const Mail = styled(SiMinutemailer)`
 const Text = styled.p`
   max-width: 58rem;
   line-height: 2rem;
-  font-size: 1.52rem;
+  font-size: 1.52em;
+  font-weight: 300;
   color: var(--color-jetblack);
 `
 

@@ -14,6 +14,17 @@ const AboutWrapper = styled.article`
   height: 50rem;
   width: 100%;
 
+  /* .int-title {
+    font-size: 2rem;
+    color: var(--color-gray-dark);
+  } */
+`
+
+const Bio = styled.div`
+  font-weight: 300;
+  color: var(--color-jetblack);
+  text-align: center;
+
   .text {
     max-width: 60rem;
     line-height: 2rem;
@@ -24,12 +35,27 @@ const AboutWrapper = styled.article`
   }
 
   .span-focus {
+    font-weight: 400;
     color: var(--color-primary-dark);
   }
 
-  .int-title {
-    font-size: 2rem;
-    color: var(--color-gray-dark);
+  a {
+    &:link {
+      text-decoration: none;
+      color: var(--color-primary-dark);
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:visited {
+      color: var(--color-primary-dark);
+    }
+  }
+
+  .link {
+    font-weight: 400;
   }
 `
 
@@ -38,11 +64,27 @@ const About = () => {
     <AboutWrapper>
       <CardTitle title={data[0].title} />
       <Avatar />
-      <p className="text">
-        {data[0].infoStart}
-        <span className="span-focus">{data[0].infoSpan}</span>
-        {data[0].infoEnd}
-      </p>
+      <Bio>
+        <p className="text">
+          Hello! and welcome to my portfolio. I'm a Front-End Developer located
+          in San Francisco - Bay Area. I earned a B.S. Degree in{" "}
+          <span className="span-focus">Information Technology Management</span>,
+          and I currently work as a volunteer for 2 non-profits,{" "}
+          <a
+            className="link"
+            href="https://armyofvolunteers.org/"
+            target="_blank"
+          >
+            Army of Volunteers for Earth
+          </a>{" "}
+          and{" "}
+          <a href="https://www.hackforla.org/" className="link" target="_blank">
+            Hack for LA
+          </a>
+          . I have a passion for learning new technologies and enjoy solving
+          complex problems.
+        </p>
+      </Bio>
     </AboutWrapper>
   )
 }

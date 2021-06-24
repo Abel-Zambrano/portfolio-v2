@@ -13,6 +13,8 @@ import { SiPython } from "@react-icons/all-files/si/SiPython"
 import { SiMysql } from "@react-icons/all-files/si/SiMysql"
 import { SiNextDotJs } from "@react-icons/all-files/si/SiNextDotJs"
 import { SiWordpress } from "@react-icons/all-files/si/SiWordpress"
+import { SiDocker } from "@react-icons/all-files/si/SiDocker"
+import { SiGit } from "@react-icons/all-files/si/SiGit"
 
 const skillsData = [
   {
@@ -66,11 +68,6 @@ const skillsData = [
     logo: <SiMongodb />,
   },
   {
-    id: 11,
-    name: "python",
-    logo: <SiPython />,
-  },
-  {
     id: 12,
     name: "mysql",
     logo: <SiMysql />,
@@ -84,6 +81,16 @@ const skillsData = [
     id: 14,
     name: "wordpress",
     logo: <SiWordpress />,
+  },
+  {
+    id: 15,
+    name: "docker",
+    logo: <SiDocker />,
+  },
+  {
+    id: 15,
+    name: "git",
+    logo: <SiGit />,
   },
 ]
 
