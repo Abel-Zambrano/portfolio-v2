@@ -66,8 +66,8 @@ const About = () => {
       <Avatar />
       <Bio>
         <p className="text">
-          Hello! and welcome to my portfolio. I'm a Front-End Developer located
-          in San Francisco - Bay Area. I earned a B.S. Degree in{" "}
+          Hello! Welcome to my portfolio. I'm a Frontend Developer located in
+          San Francisco, CA (Bay Area). I earned a B.S. Degree in{" "}
           <span className="span-focus">Information Technology Management</span>,
           and I currently work for 2 non-profits,{" "}
           <a
@@ -82,7 +82,8 @@ const About = () => {
             Hack for LA
           </a>
           . I have a passion for learning new technologies and enjoy solving
-          complex problems.
+          complex problems. I developed my website using React, Gatsby, GraphQL
+          and Contentful.
         </p>
       </Bio>
     </AboutWrapper>

@@ -40,11 +40,6 @@ const IndexPage = () => (
             <ExperienceList />
           </DisplayCard>
         </SectionImages>
-        <SectionImages id={data[3].title}>
-          <DisplayCard title={data[3].title}>
-            <ProjectList />
-          </DisplayCard>
-        </SectionImages>
         <Section id="contact">
           <Contact />
         </Section>
