@@ -14,6 +14,7 @@ import { SiNextDotJs } from "@react-icons/all-files/si/SiNextDotJs"
 import { SiWordpress } from "@react-icons/all-files/si/SiWordpress"
 import { SiDocker } from "@react-icons/all-files/si/SiDocker"
 import { SiGit } from "@react-icons/all-files/si/SiGit"
+import { SiPython } from "@react-icons/all-files/si/SiPython"
 
 const skillsData = [
   {
@@ -87,9 +88,14 @@ const skillsData = [
     logo: <SiDocker />,
   },
   {
-    id: 15,
+    id: 16,
     name: "git",
     logo: <SiGit />,
+  },
+  {
+    id: 11,
+    name: "python",
+    logo: <SiPython />,
   },
 ]
 
