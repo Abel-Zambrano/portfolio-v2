@@ -105,7 +105,7 @@ const Header = ({ id }) => {
       file(relativePath: { eq: "AZ_logo.png" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluid
           }
         }
       }
