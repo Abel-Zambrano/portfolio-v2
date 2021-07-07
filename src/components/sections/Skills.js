@@ -23,7 +23,6 @@ const SkillsWrapper = styled.article`
     @media screen and (max-width: 1000px) {
       flex-direction: column;
       justify-content: center;
-      width: 50rem;
     }
   }
 `

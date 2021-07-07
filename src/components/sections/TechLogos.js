@@ -13,13 +13,13 @@ const StyledTechLogos = styled.ul`
     margin: 2rem auto;
   }
 
-  @media screen and (max-width: 490px) {
+  @media screen and (max-width: 790px) {
     grid-template-columns: auto auto auto;
+  }
 
-    @media screen and (max-width: 390px) {
-      grid-template-columns: auto auto;
-      grid-gap: 4rem;
-    }
+  @media screen and (max-width: 560px) {
+    grid-template-columns: auto auto;
+    grid-gap: 4rem;
   }
 
   .list-item {
