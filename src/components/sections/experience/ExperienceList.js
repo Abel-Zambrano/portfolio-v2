@@ -12,6 +12,15 @@ const ExpCard = styled.div`
   min-width: 70rem;
   max-height: 80rem; //TODO: remove max if needed
   box-shadow: 1rem 1rem 2rem 1rem rgba(0, 0, 0, 0.4);
+
+  @media screen and (max-width: 790px) {
+    min-width: 0;
+    width: 50rem;
+  }
+
+  @media screen and (max-width: 560px) {
+    width: 98vw;
+  }
 `
 
 const Info = styled.div`
