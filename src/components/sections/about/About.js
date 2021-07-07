@@ -21,7 +21,6 @@ const AboutWrapper = styled.article`
 `
 
 const Bio = styled.div`
-  font-weight: 300;
   color: var(--color-jetblack);
   text-align: center;
 
