@@ -1,29 +1,105 @@
-import React from "react"
-import BackgroundImage from "gatsby-background-image"
+import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
-import LinksOverImage from "../../LinksOverImage"
+import Image from "gatsby-image"
+import { IoIosArrowDroprightCircle } from "@react-icons/all-files/io/IoIosArrowDroprightCircle"
+import { IoIosArrowDropdownCircle } from "@react-icons/all-files/io/IoIosArrowDropdownCircle"
 
-const StyledBackgroundImage = styled(BackgroundImage)`
-  width: 80rem;
-  height: 40rem;
-  background-repeat: no-repeat;
-  transition: 0.3s;
+const ExpCard = styled.div`
+  display: flex;
+  flex-direction: column;
   margin: 6rem auto;
+  min-width: 70rem;
+  max-height: 80rem; //TODO: remove max if needed
   box-shadow: 1rem 1rem 2rem 1rem rgba(0, 0, 0, 0.4);
-  background-size: contain;
+`
 
-  &:hover {
-    transform: scale(1.1);
+const Info = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin: 2rem 2rem;
+  height: 14rem;
+
+  .title {
+    text-transform: uppercase;
+    color: var(--color-primary-dark);
+    font-size: 2rem;
+    font-weight: 300;
+  }
+`
+
+const WebLinks = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 18rem;
+
+  .link-btn {
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+    border: none;
+    padding: 0.5rem 2rem;
+    border-radius: 20rem;
+    font-weight: 300;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+`
+
+const TechContainer = styled.div`
+  .tech-menu {
+    display: flex;
+    align-items: center;
+
+    &-title {
+      padding-left: 1rem;
+      color: var(--color-gray-dark);
+    }
+  }
+`
+
+const RightArrow = styled(IoIosArrowDroprightCircle)`
+  font-size: 2.5rem;
+  color: var(--color-primary-dark);
+`
+
+const DownArrow = styled(IoIosArrowDropdownCircle)`
+  font-size: 2.5rem;
+  color: var(--color-primary-dark);
+`
+
+const TechMenu = styled.div`
+  .tech-section {
+    display: flex;
+    justify-content: center;
   }
 
-  @media screen and (max-width: 760px) {
-    width: 36rem;
-    height: 18rem;
+  .tech-list {
+    display: grid;
+    grid-template-columns: 20rem 20rem 20rem;
+    row-gap: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+
+    &-item {
+      list-style: none;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      color: var(--color-gray-dark);
+    }
   }
 `
 
 const ExpScreenshot = () => {
+  const [techId, setTechId] = useState()
+
+  const techIdHandler = value => () => {
+    setTechId(value)
+  }
+
   const data = useStaticQuery(graphql`
     {
       allContentfulExperience {
@@ -36,6 +112,10 @@ const ExpScreenshot = () => {
             fluid(quality: 95) {
               ...GatsbyContentfulFluid
             }
+          }
+          tech {
+            id
+            techName
           }
         }
       }
@@ -50,17 +130,44 @@ const ExpScreenshot = () => {
     <div>
       {exp.map(e => {
         return (
-          <StyledBackgroundImage key={e.id} fluid={e.preview.fluid}>
-            <LinksOverImage
-              title={e.company}
-              webLink={e.webUrl}
-              gitLink={e.gitUrl}
-            />
-          </StyledBackgroundImage>
+          <ExpCard key={e.id}>
+            <Image fluid={e.preview.fluid} />
+            <Info>
+              <h2 className="title">{e.company}</h2>
+              <WebLinks>
+                <a href={e.webUrl} className="link" target="_blank">
+                  <button className="link-btn">Website</button>
+                </a>
+                <a href={e.gitUrl} className="link" target="_blank">
+                  <button className="link-btn">Code</button>
+                </a>
+              </WebLinks>
+              <TechContainer>
+                <div className="tech-menu">
+                  {techId === e.id ? (
+                    <DownArrow id={e.id} onClick={techIdHandler(null)} />
+                  ) : (
+                    <RightArrow id={e.id} onClick={techIdHandler(e.id)} />
+                  )}{" "}
+                  <h3 className="tech-menu-title">Tech Stack</h3>
+                </div>
+              </TechContainer>
+            </Info>
+            <TechMenu>
+              <div className="tech-section">
+                {techId === e.id ? (
+                  <ul className="tech-list">
+                    {e.tech.techName.map(f => {
+                      return <li className="tech-list-item">{f}</li>
+                    })}
+                  </ul>
+                ) : null}
+              </div>
+            </TechMenu>
+          </ExpCard>
         )
       })}
     </div>
   )
 }
-
 export default ExpScreenshot
