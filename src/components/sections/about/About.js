@@ -11,7 +11,7 @@ const AboutWrapper = styled.article`
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  min-height: 50rem;
+  min-height: 70rem;
   width: 100%;
 
   /* .int-title {
