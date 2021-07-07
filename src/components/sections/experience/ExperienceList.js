@@ -88,8 +88,9 @@ const TechMenu = styled.div`
 
   .tech-list {
     display: grid;
-    grid-template-columns: 20rem 20rem 20rem;
+    grid-template-columns: auto auto auto;
     row-gap: 4rem;
+    width: 100%;
     margin-top: 2rem;
     margin-bottom: 4rem;
 
