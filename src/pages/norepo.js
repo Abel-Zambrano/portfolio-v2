@@ -1,9 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 import GlobalStyles from "../globalStyles"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout/Layout"
 import DisplayCard from "../components/DisplayCard"
+import Button from "../components/Button"
 
 const StyledNoRepo = styled.div`
   display: flex;
@@ -20,6 +22,7 @@ const StyledNoRepo = styled.div`
 
   .text {
     font-size: 2.5rem;
+    margin-bottom: 4rem;
   }
 `
 
@@ -38,6 +41,9 @@ const norepo = () => {
               The Github Repo is either unavailable due to NDA or it was
               developed with WordPress.
             </p>
+            <Link to="/#experience">
+              <Button text="Return to Experience" />
+            </Link>
           </div>
         </StyledDisplayCard>
       </Layout>
