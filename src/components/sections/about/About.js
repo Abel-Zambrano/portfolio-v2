@@ -68,15 +68,7 @@ const About = () => {
           Hello! Welcome to my portfolio. I'm a Frontend Developer located in
           San Francisco, CA (Bay Area). I earned a B.S. Degree in{" "}
           <span className="span-focus">Information Technology Management</span>,
-          and I currently work for 2 non-profits,{" "}
-          <a
-            className="link"
-            href="https://armyofvolunteers.org/"
-            target="_blank"
-          >
-            Army of Volunteers for Earth
-          </a>{" "}
-          and{" "}
+          and I currently work for a non-profit,{" "}
           <a href="https://www.hackforla.org/" className="link" target="_blank">
             Hack for LA
           </a>
