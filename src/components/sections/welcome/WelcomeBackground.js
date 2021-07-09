@@ -12,6 +12,7 @@ const StyledBgImage = styled(BgImage)`
   max-width: 100vw;
   height: 84vh;
   filter: brightness(60%);
+  background-attachment: fixed;
 `
 
 const WelcomeBackground = ({ children }) => {
