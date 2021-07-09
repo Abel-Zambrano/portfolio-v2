@@ -1,7 +1,0 @@
-[[redirects]]
-  from = "https://www.abel-zambrano.com"
-  to = "https://azambrano.io"
-  status = 301
-  force = false
-  query = {path = ":path"}
-  conditions = {Language = ["en"], Country = ["US"], Role = ["admin"]}
