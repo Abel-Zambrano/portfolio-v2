@@ -15,8 +15,8 @@ const StyledBgImage = styled(BgImage)`
   background-attachment: fixed;
 
   @media screen and (max-width: 560px) {
-    width: 100vw !important;
     height: 95vh;
+    background-size: auto !important;
   }
 `
 
