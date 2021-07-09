@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Image from "gatsby-image"
 import { IoIosArrowDroprightCircle } from "@react-icons/all-files/io/IoIosArrowDroprightCircle"
 import { IoIosArrowDropdownCircle } from "@react-icons/all-files/io/IoIosArrowDropdownCircle"
+import RedesignBanner from "../../RedesignBanner"
 
 const ExpCard = styled.div`
   display: flex;
@@ -118,6 +119,7 @@ const ExpScreenshot = () => {
           gitUrl
           id
           webUrl
+          redesign
           preview {
             fluid(quality: 95) {
               ...GatsbyContentfulFluid
@@ -142,6 +144,7 @@ const ExpScreenshot = () => {
         return (
           <ExpCard key={e.id}>
             <Image fluid={e.preview.fluid} />
+            {e.redesign ? <RedesignBanner /> : null}
             <Info>
               <h2 className="title">{e.company}</h2>
               <WebLinks>

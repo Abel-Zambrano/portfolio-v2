@@ -12,7 +12,7 @@ const GlobalStyles = createGlobalStyle`
     --color-gray-dark:    #4d4d4d;
     --color-gray-light: #f2f2f2;
     --color-white:  #ffffff;
-    --color-pink:   #f565f6;
+    --color-update:   #EB17B2;
     --color-linkedin: #0072b1;
     --color-green: #4caf50;
 
