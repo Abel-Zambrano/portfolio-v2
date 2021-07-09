@@ -12,6 +12,10 @@ const StyledBgImage = styled(BgImage)`
   min-width: 100vw;
   height: 84vh;
   filter: brightness(60%);
+
+  @media screen and (max-width: 560px) {
+    height: 95vh;
+  }
 `
 
 const WelcomeBackground = ({ children }) => {
