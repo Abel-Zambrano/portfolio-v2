@@ -4,7 +4,7 @@ import styled from "styled-components"
 const StyledButton = styled.button`
   text-transform: uppercase;
   font-size: 2rem;
-  padding: 2rem 6rem;
+  padding: 1rem 6rem;
   color: var(--color-primary-dark);
   border: 0.2rem solid var(--color-primary-dark);
   transition: 0.2s;
