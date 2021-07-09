@@ -14,9 +14,9 @@ const StyledBgImage = styled(BgImage)`
   filter: brightness(60%);
   background-attachment: fixed;
 
-  /* @media screen and (max-width: 560px) {
-    background-attachment: scroll;
-  } */
+  @media screen and (max-width: 560px) {
+    min-width: 100vw !important;
+  }
 `
 
 const WelcomeBackground = ({ children }) => {
