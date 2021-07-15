@@ -52,9 +52,11 @@ const WebLinks = styled.div`
     padding: 0.5rem 2rem;
     border-radius: 20rem;
     font-weight: 300;
+    transition: background-color 200ms ease-in;
 
     &:hover {
       cursor: pointer;
+      background-color: var(--color-primary);
     }
   }
 `
@@ -74,11 +76,21 @@ const TechContainer = styled.div`
 const RightArrow = styled(IoIosArrowDroprightCircle)`
   font-size: 2.5rem;
   color: var(--color-primary-dark);
+  transition: color 200ms ease-in;
+
+  &:hover {
+    color: var(--color-primary);
+  }
 `
 
 const DownArrow = styled(IoIosArrowDropdownCircle)`
   font-size: 2.5rem;
   color: var(--color-primary-dark);
+  transition: color 200ms ease-in;
+
+  &:hover {
+    color: var(--color-primary);
+  }
 `
 
 const TechMenu = styled.div`

@@ -41,11 +41,10 @@ const Bio = styled.div`
   a {
     &:link {
       text-decoration: none;
-      color: var(--color-primary-dark);
     }
 
     &:hover {
-      text-decoration: underline;
+      color: var(--color-primary);
     }
 
     &:visited {
@@ -54,7 +53,11 @@ const Bio = styled.div`
   }
 
   .link {
-    font-weight: 400;
+    color: var(--color-primary-dark);
+
+    &:hover {
+      color: var(--color-primary);
+    }
   }
 `
 

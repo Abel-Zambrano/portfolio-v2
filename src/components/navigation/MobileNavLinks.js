@@ -33,6 +33,7 @@ const StyledMobileNavLinks = styled.ul`
     text-decoration: none;
     font-size: 1.8rem;
     text-transform: uppercase;
+    transition: color 200ms ease-in;
 
     &:hover {
       color: var(--color-primary);
