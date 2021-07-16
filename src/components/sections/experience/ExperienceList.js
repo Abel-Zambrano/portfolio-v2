@@ -57,6 +57,10 @@ const WebLinks = styled.div`
     &:hover {
       cursor: pointer;
       background-color: var(--color-primary);
+
+      @media screen and (max-width: 560px) {
+        background-color: var(--color-primary-dark);
+      }
     }
   }
 `
