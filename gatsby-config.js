@@ -8,6 +8,20 @@ module.exports = {
     author: `Abel Zambrano`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "G-WH01FFRLTX", // Google Analytics / GA
+        ],
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true,
+        },
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -41,13 +55,6 @@ module.exports = {
       resolve: `gatsby-plugin-styled-components`,
       options: {
         // Add any options here
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
-        trackingId: process.env.GOOGLE_TRACKING,
       },
     },
   ],
