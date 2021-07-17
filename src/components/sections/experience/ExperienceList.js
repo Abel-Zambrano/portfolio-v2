@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import Image from "gatsby-image"
 import { IoIosArrowDroprightCircle } from "@react-icons/all-files/io/IoIosArrowDroprightCircle"
-import { IoIosArrowDropdownCircle } from "@react-icons/all-files/io/IoIosArrowDropdownCircle"
 import RedesignBanner from "../../RedesignBanner"
 
 const ExpCard = styled.div`
@@ -80,17 +79,11 @@ const TechContainer = styled.div`
 const RightArrow = styled(IoIosArrowDroprightCircle)`
   font-size: 2.5rem;
   color: var(--color-primary-dark);
-  transition: color 200ms ease-in;
+  transition: all 200ms ease-in;
 
-  &:hover {
-    color: var(--color-primary);
+  &.down {
+    transform: rotate(90deg) !important; //TODO
   }
-`
-
-const DownArrow = styled(IoIosArrowDropdownCircle)`
-  font-size: 2.5rem;
-  color: var(--color-primary-dark);
-  transition: color 200ms ease-in;
 
   &:hover {
     color: var(--color-primary);
@@ -98,6 +91,15 @@ const DownArrow = styled(IoIosArrowDropdownCircle)`
 `
 
 const TechMenu = styled.div`
+  transition: all 200ms ease-in;
+  height: 0; // TODO: create css classname to offset
+  opacity: 0; //TODO
+
+  &.visible-list {
+    height: 16rem;
+    opacity: 1;
+  }
+
   .tech-section {
     display: flex;
     justify-content: center;
@@ -120,11 +122,12 @@ const TechMenu = styled.div`
   }
 `
 
-const ExpScreenshot = () => {
-  const [techId, setTechId] = useState()
+const ExperienceList = () => {
+  const [downArrow, setDownArrow] = useState(false)
 
-  const techIdHandler = value => () => {
-    setTechId(value)
+  const downArrowHandler = () => {
+    setDownArrow(!downArrow)
+    console.log(`clicked: ${downArrow}`)
   }
 
   const data = useStaticQuery(graphql`
@@ -162,35 +165,49 @@ const ExpScreenshot = () => {
             <Image fluid={e.preview.fluid} />
             {e.redesign ? <RedesignBanner /> : null}
             <Info>
-              <h2 className="title">{e.company}</h2>
+              <h2 className="title">
+                {e.company}
+                {e.id}
+              </h2>
               <WebLinks>
-                <a href={e.webUrl} className="link" target="_blank">
+                <a
+                  href={e.webUrl}
+                  className="link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <button className="link-btn">Website</button>
                 </a>
-                <a href={e.gitUrl} className="link" target="_blank">
+                <a
+                  href={e.gitUrl}
+                  className="link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <button className="link-btn">Code</button>
                 </a>
               </WebLinks>
               <TechContainer>
                 <div className="tech-menu">
-                  {techId === e.id ? (
-                    <DownArrow id={e.id} onClick={techIdHandler(null)} />
-                  ) : (
-                    <RightArrow id={e.id} onClick={techIdHandler(e.id)} />
-                  )}{" "}
+                  <RightArrow
+                    className={downArrow ? "down" : null}
+                    onClick={downArrowHandler}
+                  />
                   <h3 className="tech-menu-title">Tech Stack</h3>
                 </div>
               </TechContainer>
             </Info>
-            <TechMenu>
+            <TechMenu className={downArrow ? "visible-list" : null}>
               <div className="tech-section">
-                {techId === e.id ? (
-                  <ul className="tech-list">
-                    {e.tech.techName.map(f => {
-                      return <li className="tech-list-item">{f}</li>
-                    })}
-                  </ul>
-                ) : null}
+                <ul className="tech-list">
+                  {e.tech.techName.map(f => {
+                    return (
+                      <li key={f} className="tech-list-item">
+                        {f}
+                      </li>
+                    )
+                  })}
+                </ul>
               </div>
             </TechMenu>
           </ExpCard>
@@ -199,4 +216,4 @@ const ExpScreenshot = () => {
     </div>
   )
 }
-export default ExpScreenshot
+export default ExperienceList
