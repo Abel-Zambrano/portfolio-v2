@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import Image from "gatsby-image"
 import { IoIosArrowDroprightCircle } from "@react-icons/all-files/io/IoIosArrowDroprightCircle"
+import { IoIosArrowDropdownCircle } from "@react-icons/all-files/io/IoIosArrowDropdownCircle"
 import RedesignBanner from "../../RedesignBanner"
 
 const ExpCard = styled.div`
@@ -90,6 +91,20 @@ const RightArrow = styled(IoIosArrowDroprightCircle)`
   }
 `
 
+const DownArrow = styled(IoIosArrowDropdownCircle)`
+  font-size: 2.5rem;
+  color: var(--color-primary-dark);
+  transition: all 200ms ease-in;
+
+  &.down {
+    transform: rotate(90deg) !important; //TODO
+  }
+
+  &:hover {
+    color: var(--color-primary);
+  }
+`
+
 const TechMenu = styled.div`
   transition: all 200ms ease-in;
   height: 0; // TODO: create css classname to offset
@@ -127,6 +142,7 @@ const ExperienceList = () => {
     {
       allContentfulExperience {
         nodes {
+          order
           company
           gitUrl
           id
@@ -150,33 +166,19 @@ const ExperienceList = () => {
     allContentfulExperience: { nodes: exp },
   } = data
 
-  const [menuOpen, setMenuOpen] = useState(false)
+  // const [menuOpen, setMenuOpen] = useState(false)
   const [trackId, setTrackId] = useState()
-  const idArr = []
+  // const [idArr, setIdArr] = useState([100, 200, 300])
 
-  const menuHandler = value => () => {
-    setMenuOpen(!menuOpen)
+  const idHandler = value => () => {
     setTrackId(value)
-    idArr.push(value)
-
-    // arrHandler(idArr, trackId)
   }
 
-  const arrHandler = (arr, id) => {
-    console.log(`arrHandler activated `)
-    console.log(`arr: ${arr}`)
-    console.log(`id: ${id}`)
-    for (let i = 0; i < arr.length; i++) {
-      if (id != arr[i]) {
-        console.log(`first break ${arr}`)
-        break
-      } else {
-        arr.push(id)
-        console.log(`second break ${arr}`)
-        break
-      }
-    }
-  }
+  // idHandler(100)
+
+  // const menuHandler = () => {
+  //   setMenuOpen(!menuOpen)
+  // }
 
   return (
     <div>
@@ -188,7 +190,7 @@ const ExperienceList = () => {
             <Info>
               <h2 className="title">
                 {e.company}
-                {e.id}
+                {e.order}
               </h2>
               <WebLinks>
                 <a
@@ -210,15 +212,19 @@ const ExperienceList = () => {
               </WebLinks>
               <TechContainer>
                 <div className="tech-menu">
-                  <RightArrow
-                    className={menuOpen ? "down" : null}
-                    onClick={menuHandler(e.id)}
-                  />
+                  {trackId === e.order ? (
+                    <DownArrow onClick={idHandler(null)} />
+                  ) : (
+                    <RightArrow
+                      className={trackId === e.order ? "down" : null}
+                      onClick={idHandler(e.order)}
+                    />
+                  )}
                   <h3 className="tech-menu-title">Tech Stack</h3>
                 </div>
               </TechContainer>
             </Info>
-            {/* <TechMenu className={downArrow ? "visible-list" : null}>
+            <TechMenu className={trackId === e.order ? "visible-list" : null}>
               <div className="tech-section">
                 <ul className="tech-list">
                   {e.tech.techName.map(f => {
@@ -230,7 +236,7 @@ const ExperienceList = () => {
                   })}
                 </ul>
               </div>
-            </TechMenu> */}
+            </TechMenu>
           </ExpCard>
         )
       })}
