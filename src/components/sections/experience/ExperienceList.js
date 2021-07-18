@@ -123,13 +123,6 @@ const TechMenu = styled.div`
 `
 
 const ExperienceList = () => {
-  const [downArrow, setDownArrow] = useState(false)
-
-  const downArrowHandler = () => {
-    setDownArrow(!downArrow)
-    console.log(`clicked: ${downArrow}`)
-  }
-
   const data = useStaticQuery(graphql`
     {
       allContentfulExperience {
@@ -156,6 +149,34 @@ const ExperienceList = () => {
   const {
     allContentfulExperience: { nodes: exp },
   } = data
+
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [trackId, setTrackId] = useState()
+  const idArr = []
+
+  const menuHandler = value => () => {
+    setMenuOpen(!menuOpen)
+    setTrackId(value)
+    idArr.push(value)
+
+    // arrHandler(idArr, trackId)
+  }
+
+  const arrHandler = (arr, id) => {
+    console.log(`arrHandler activated `)
+    console.log(`arr: ${arr}`)
+    console.log(`id: ${id}`)
+    for (let i = 0; i < arr.length; i++) {
+      if (id != arr[i]) {
+        console.log(`first break ${arr}`)
+        break
+      } else {
+        arr.push(id)
+        console.log(`second break ${arr}`)
+        break
+      }
+    }
+  }
 
   return (
     <div>
@@ -190,14 +211,14 @@ const ExperienceList = () => {
               <TechContainer>
                 <div className="tech-menu">
                   <RightArrow
-                    className={downArrow ? "down" : null}
-                    onClick={downArrowHandler}
+                    className={menuOpen ? "down" : null}
+                    onClick={menuHandler(e.id)}
                   />
                   <h3 className="tech-menu-title">Tech Stack</h3>
                 </div>
               </TechContainer>
             </Info>
-            <TechMenu className={downArrow ? "visible-list" : null}>
+            {/* <TechMenu className={downArrow ? "visible-list" : null}>
               <div className="tech-section">
                 <ul className="tech-list">
                   {e.tech.techName.map(f => {
@@ -209,7 +230,7 @@ const ExperienceList = () => {
                   })}
                 </ul>
               </div>
-            </TechMenu>
+            </TechMenu> */}
           </ExpCard>
         )
       })}
