@@ -120,7 +120,7 @@ const TechMenu = styled.div`
   }
 `
 
-const ExpScreenshot = () => {
+const ExperienceList = () => {
   const [techId, setTechId] = useState()
 
   const techIdHandler = value => () => {
@@ -195,9 +195,13 @@ const ExpScreenshot = () => {
             <TechMenu>
               <div className="tech-section">
                 {techId === e.id ? (
-                  <ul key={e.id} className="tech-list">
+                  <ul className="tech-list">
                     {e.tech.techName.map(f => {
-                      return <li className="tech-list-item">{f}</li>
+                      return (
+                        <li key={f} className="tech-list-item">
+                          {f}
+                        </li>
+                      )
                     })}
                   </ul>
                 ) : null}
@@ -209,4 +213,4 @@ const ExpScreenshot = () => {
     </div>
   )
 }
-export default ExpScreenshot
+export default ExperienceList
