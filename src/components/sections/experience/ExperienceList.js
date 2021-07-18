@@ -164,10 +164,20 @@ const ExpScreenshot = () => {
             <Info>
               <h2 className="title">{e.company}</h2>
               <WebLinks>
-                <a href={e.webUrl} className="link" target="_blank">
+                <a
+                  href={e.webUrl}
+                  className="link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <button className="link-btn">Website</button>
                 </a>
-                <a href={e.gitUrl} className="link" target="_blank">
+                <a
+                  href={e.gitUrl}
+                  className="link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <button className="link-btn">Code</button>
                 </a>
               </WebLinks>
@@ -185,7 +195,7 @@ const ExpScreenshot = () => {
             <TechMenu>
               <div className="tech-section">
                 {techId === e.id ? (
-                  <ul className="tech-list">
+                  <ul key={e.id} className="tech-list">
                     {e.tech.techName.map(f => {
                       return <li className="tech-list-item">{f}</li>
                     })}

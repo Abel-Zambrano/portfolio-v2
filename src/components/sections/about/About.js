@@ -72,7 +72,12 @@ const About = () => {
           San Francisco, CA (Bay Area). I earned a B.S. Degree in{" "}
           <span className="span-focus">Information Technology Management</span>,
           and I currently work for a non-profit,{" "}
-          <a href="https://www.hackforla.org/" className="link" target="_blank">
+          <a
+            href="https://www.hackforla.org/"
+            className="link"
+            target="_blank"
+            rel="noreferrer"
+          >
             Hack for LA
           </a>
           . I have a passion for learning new technologies and enjoy solving
