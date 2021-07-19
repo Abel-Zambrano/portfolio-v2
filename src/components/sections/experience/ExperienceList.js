@@ -166,19 +166,43 @@ const ExperienceList = () => {
     allContentfulExperience: { nodes: exp },
   } = data
 
-  // const [menuOpen, setMenuOpen] = useState(false)
-  const [trackId, setTrackId] = useState()
-  // const [idArr, setIdArr] = useState([100, 200, 300])
+  const [order, setOrder] = useState()
+  const [orderArr, setOrderArr] = useState([])
+  const [inArray, setInArray] = useState(false)
 
-  const idHandler = value => () => {
-    setTrackId(value)
+  const enterArray = (arr, order) => {
+    if (arr.indexOf(order) !== -1) {
+      console.log("value exists")
+    } else {
+      console.log("does not exist, adding value to array")
+      arr.push(order)
+      setInArray(true)
+    }
   }
 
-  // idHandler(100)
+  const exitArray = (arr, order) => {
+    const index = arr.indexOf(order)
+    if (index > -1) {
+      arr.splice(index, 1)
+      setInArray(false)
+      console.log(arr)
+    }
+  }
 
-  // const menuHandler = () => {
-  //   setMenuOpen(!menuOpen)
-  // }
+  const enterHandler = (arr, value) => () => {
+    setOrder(value)
+    enterArray(arr, value)
+    // arrCheck(arr, value)
+  }
+
+  const exitHandler = (arr, value) => () => {
+    setOrder(value)
+    exitArray(arr, value)
+  }
+
+  console.log(`Order: ${order}`)
+  console.log(`Order Array: ${orderArr}`)
+  console.log(`Order in Array: ${inArray}`)
 
   return (
     <div>
@@ -212,19 +236,24 @@ const ExperienceList = () => {
               </WebLinks>
               <TechContainer>
                 <div className="tech-menu">
-                  {trackId === e.order ? (
-                    <DownArrow onClick={idHandler(null)} />
+                  <DownArrow onClick={exitHandler(orderArr, e.order)} />
+                  {/* {inArray ? (
+                    <DownArrow onClick={exitHandler(orderArr, e.order)} />
                   ) : (
                     <RightArrow
-                      className={trackId === e.order ? "down" : null}
-                      onClick={idHandler(e.order)}
+                      // className={order === e.order ? "down" : null}
+                      onClick={enterHandler(orderArr, e.order)}
                     />
-                  )}
+                  )} */}
+                  <RightArrow
+                    // className={order === e.order ? "down" : null}
+                    onClick={enterHandler(orderArr, e.order)}
+                  />
                   <h3 className="tech-menu-title">Tech Stack</h3>
                 </div>
               </TechContainer>
             </Info>
-            <TechMenu className={trackId === e.order ? "visible-list" : null}>
+            {/* <TechMenu className={trackId === e.order ? "visible-list" : null}>
               <div className="tech-section">
                 <ul className="tech-list">
                   {e.tech.techName.map(f => {
@@ -236,7 +265,7 @@ const ExperienceList = () => {
                   })}
                 </ul>
               </div>
-            </TechMenu>
+            </TechMenu> */}
           </ExpCard>
         )
       })}
