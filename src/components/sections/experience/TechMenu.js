@@ -28,7 +28,12 @@ const MyTechMenu = styled.div`
       list-style: none;
       font-size: 1.3rem;
       text-transform: uppercase;
-      color: var(--color-gray-dark);
+      color: var(--color-gray-light);
+      transition: color 100ms ease-in;
+
+      &.visible {
+        color: var(--color-gray-dark);
+      }
     }
   }
 `
@@ -40,7 +45,12 @@ const TechMenu = ({ tech, visible }) => {
         <ul className="tech-list">
           {tech.techName.map(f => {
             return (
-              <li key={f} className="tech-list-item">
+              <li
+                key={f}
+                className={
+                  visible ? "tech-list-item visible" : "tech-list-item"
+                }
+              >
                 {f}
               </li>
             )

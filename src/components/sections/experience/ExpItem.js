@@ -90,20 +90,6 @@ const RightArrow = styled(IoIosArrowDroprightCircle)`
   }
 `
 
-const DownArrow = styled(IoIosArrowDropdownCircle)`
-  font-size: 2.5rem;
-  color: var(--color-primary-dark);
-  transition: all 200ms ease-in;
-
-  &.down {
-    transform: rotate(90deg) !important; //TODO
-  }
-
-  &:hover {
-    color: var(--color-primary);
-  }
-`
-
 const ExpItem = ({ id, image, redesign, company, website, github, tech }) => {
   const [open, setOpen] = useState(false)
 
@@ -128,13 +114,12 @@ const ExpItem = ({ id, image, redesign, company, website, github, tech }) => {
         </WebLinks>
         <TechContainer>
           <div className="tech-menu">
-            <RightArrow onClick={toggle} />
+            <RightArrow className={open ? "down" : null} onClick={toggle} />
             <h3 className="tech-menu-title">Tech Stack</h3>
           </div>
         </TechContainer>
-        <TechMenu tech={tech} visible={open} />
-        {/* {open ? <TechMenu tech={tech} /> : null} */}
       </Info>
+      <TechMenu tech={tech} visible={open} />
     </MyExpItem>
   )
 }
