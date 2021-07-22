@@ -42,6 +42,7 @@ const ExperienceList = () => {
             website={e.webUrl}
             github={e.gitUrl}
             tech={e.tech}
+            redesign={e.redesign}
           />
         )
       })}
