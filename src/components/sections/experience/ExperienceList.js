@@ -5,19 +5,18 @@ import ExpItem from "./ExpItem"
 const ExperienceList = () => {
   const data = useStaticQuery(graphql`
     {
-      allContentfulExperience {
+      allContentfulExperience(sort: { order: DESC, fields: order }) {
         nodes {
-          order
           company
           gitUrl
           id
-          webUrl
-          redesign
           preview {
-            fluid(quality: 95) {
+            fluid {
               ...GatsbyContentfulFluid
             }
           }
+          redesign
+          webUrl
           tech {
             id
             techName
