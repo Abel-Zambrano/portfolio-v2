@@ -1,24 +1,22 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Item from "../../Item"
+import Item from "./Item"
 
-const ExperienceList = () => {
+const PortfolioList = () => {
   const data = useStaticQuery(graphql`
     {
-      allContentfulExperience(sort: { order: DESC, fields: order }) {
+      allContentfulPortfolio {
         nodes {
-          company
-          gitUrl
           id
-          preview {
+          title
+          image {
             fluid {
               ...GatsbyContentfulFluid
             }
           }
-          redesign
           webUrl
+          gitUrl
           tech {
-            id
             techName
           }
         }
@@ -27,25 +25,25 @@ const ExperienceList = () => {
   `)
 
   const {
-    allContentfulExperience: { nodes: exp },
+    allContentfulPortfolio: { nodes: portfolio },
   } = data
 
   return (
     <>
-      {exp.map(e => {
+      {portfolio.map(e => {
         return (
           <Item
             key={e.id}
-            image={e.preview.fluid}
-            company={e.company}
+            image={e.image.fluid}
+            company={e.title}
             website={e.webUrl}
             github={e.gitUrl}
             tech={e.tech}
-            redesign={e.redesign}
           />
         )
       })}
     </>
   )
 }
-export default ExperienceList
+
+export default PortfolioList

@@ -2,9 +2,8 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import Image from "gatsby-image"
 import { IoIosArrowDroprightCircle } from "@react-icons/all-files/io/IoIosArrowDroprightCircle"
-import { IoIosArrowDropdownCircle } from "@react-icons/all-files/io/IoIosArrowDropdownCircle"
-import RedesignBanner from "../../RedesignBanner"
-import TechMenu from "./TechMenu"
+import RedesignBanner from "./RedesignBanner"
+import TechMenu from "./sections/experience/TechMenu"
 
 const MyExpItem = styled.div`
   display: flex;
@@ -90,7 +89,7 @@ const RightArrow = styled(IoIosArrowDroprightCircle)`
   }
 `
 
-const ExpItem = ({ id, image, redesign, company, website, github, tech }) => {
+const Item = ({ id, image, redesign, company, website, github, tech }) => {
   const [open, setOpen] = useState(false)
 
   const toggle = () => {
@@ -124,4 +123,4 @@ const ExpItem = ({ id, image, redesign, company, website, github, tech }) => {
   )
 }
 
-export default ExpItem
+export default Item

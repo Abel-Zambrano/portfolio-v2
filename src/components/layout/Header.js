@@ -26,7 +26,7 @@ const StyledHeader = styled.div`
 
   .header-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 0 2.2rem;
     align-items: center;
   }
