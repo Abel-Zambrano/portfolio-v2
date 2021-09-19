@@ -29,11 +29,11 @@ const links = [
     text: "contact",
     url: "/#contact",
   },
-  {
-    id: 7,
-    text: "legacy",
-    url: "/legacy",
-  },
+  // {
+  //   id: 7,
+  //   text: "legacy",
+  //   url: "/legacy",
+  // },
 ]
 
 export default links
